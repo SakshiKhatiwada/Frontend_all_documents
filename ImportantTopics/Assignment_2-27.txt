@@ -1,0 +1,65 @@
+//1) to extract largest and smallest number from array
+
+function MinMax(Arr)
+{
+    let minValue, maxValue;
+    minValue = maxValue = Arr[0];
+    for (let i =0; i< Arr.length; i++)
+        {
+            if (minValue > Arr[i])
+                {
+                    minValue = Arr[i];
+                }
+            
+            if (maxValue < Arr[i])
+                {
+                    maxValue = Arr[i];
+                }
+        }
+
+    return ([minValue, maxValue]);  //returning array
+}
+
+let Arr = [];
+let n = parseInt(prompt("Enter the no. of elements in an array: "));
+
+for (let i=0; i<n; i++)
+    {
+        Arr[i]= parseFloat(prompt("Enter any number: "));
+    }
+
+    console.log("Array elements: ", Arr);
+console.log("minimum and maximum values are: ", MinMax (Arr));  //character array is consoled
+
+// 2) to console the sum of all elemets of array
+
+function sumOfElements (arr)
+{
+    let Total = 0;
+
+    for ( let value of arr)
+        {
+            Total += value;
+        }
+
+        return Total;
+}
+
+console.log("Sum of all the elements is: ", sumOfElements(Arr));
+
+
+//3) to sum only even numbers
+ 
+function SumEven (arr)
+{
+    let SumEven = 0;
+    for (let value of arr)
+        {
+            if (value % 2 == 0){
+                SumEven += value;
+            }
+        }
+        return SumEven;
+}
+
+console.log("Sum of only even elements: ", SumEven(Arr));

@@ -1,0 +1,51 @@
+*{
+    /* margin: 0; */
+    /* padding: 0; */
+    box-sizing: border-box;
+    background-color: var(--background);
+    font-family: "Playwrite BE VLG", cursive;
+  font-optical-sizing: auto;
+  font-weight:200;
+  font-style: normal;
+}
+
+:root{
+    --blue: rgb(128, 128, 192);
+    --background: #eee;
+    --dark: #1f1e1e;
+}
+
+.container{
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(5,1fr);
+    width: 50rem;
+    height: 30rem;
+    margin-left: 20%;
+    gap: 30px;
+}
+.box{
+    /* margin: 100px; */
+    padding: 20px;
+    width: 90%;
+    height: 90%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    grid-row-start: 1;
+    grid-row-end: 6;
+
+    box-shadow: -3px -3px 10px 7px rgba(0,0,0,0.2);
+    box-shadow: 3px 3px 10px 7px rgba(0,0,0,0.2);
+    transition: background-color 0.5s,translate 0.5s;
+}
+
+.box:hover{
+   
+    transform: translate(0px, -10px);
+    background-color: var(--dark);
+    cursor: pointer;
+    color: white;
+    
+}

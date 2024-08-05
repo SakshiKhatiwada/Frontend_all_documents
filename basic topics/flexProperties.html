@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            width: 400px; /* Total container width */
+            border: 2px solid black;
+        }
+
+        .item {
+            flex-basis: 50px; 
+            /* Each item initially has 200px width */
+            flex-grow: 1;
+            /* width: 50px; */
+            background-color: lightblue;
+            margin: 5px;
+            border: 1px solid navy;
+            text-align: center;
+            line-height: 100px; /* Center text vertically */
+        }
+
+        .item.large {
+            flex-grow: 2;
+            /* width: 100px; */
+            /* flex-shrink: 2;  */
+            /* This item shrinks faster */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item large">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+</body>
+</html>

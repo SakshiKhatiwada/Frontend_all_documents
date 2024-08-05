@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(194, 189, 183);
+}
+
+.addButton,.submitButton{
+    padding: 15px;
+    max-width: fit-content;
+    outline: none;
+    border: 1px solid rgb(83, 83, 233);
+    background-color: rgb(26, 26, 40);
+    border-radius: 30px;
+    font-weight: 900;
+    font-size: 25px;
+    color: rgb(159, 155, 155);
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 2px rgba(173, 120, 75, 0.2);
+    text-shadow: 2px 2px 2px rgb(73, 73, 90);
+    
+    margin: 20px;
+}
+
+.submitButton{
+    background-color: rgb(126, 202, 126);
+    padding: 15px;
+    color: black;
+    border: 1px solid green;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px #30c7a1;
+}
+
+
+.body{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form{
+    max-width: fit-content;
+    background-color: #ccc;
+    display: flex;
+    flex-direction: column;
+gap: 20px;
+padding: 30px;
+border-radius: 20px;
+}
+
+input{
+    border-radius: 30px;
+    background-color: azure;
+    padding: 15px;
+    outline: none;
+    border: #ddd;
+}
+
+.heading{
+    border-radius: 12px;
+    font-weight: 400;
+    font-size: 18px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+input:focus{
+    outline: blue;
+    box-shadow: 1px 1px 1px 1px rgba(75, 127, 173, 0.2);
+}

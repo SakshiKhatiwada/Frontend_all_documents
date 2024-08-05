@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: aliceblue;
+}
+
+.head{
+    text-align: center;
+    background-color: antiquewhite;
+    color:rgb(45, 106, 197);
+}
+.container{
+    margin: 20px 50px;
+    padding: 30px;
+    display: grid;
+    place-items: center;
+    gap: 20px;
+
+}
+
+.text{
+    padding: 5px;
+    border: 2px solid #974e4e;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px 2px rgba(185, 81, 107, 0.2);
+   
+}
+
+.text:focus{
+    border: 2px solid rgb(81, 81, 212);
+    box-shadow: 2px 4px 5px 2px rgba(81, 119, 185, 0.2);
+  
+}
+
+.count{
+    padding: 10px;
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.countWords, .countCharacters{
+    padding: 15px;
+    font-size: 18;
+    font-weight: 500;
+    background-color: rgb(109, 144, 198);
+    border:2px solid rgb(41, 152, 176);
+    border-radius: 30px;
+    transition: 0.2s ease-in-out;
+}
+
+.spanC , .spanW{
+    background-color: rgb(109, 144, 198);
+
+}
+
+
+.countWords:hover,.countCharacters:hover{
+    box-shadow: 1px 1px 2px 5px rgba(29, 85, 125, 0.2);
+    background-color: rgb(45, 106, 197);
+    color: white;
+    cursor: pointer;
+
+}
