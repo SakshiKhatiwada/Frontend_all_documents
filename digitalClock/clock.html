@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+
+    <!-- css -->
+    <style>
+        .body{
+            margin: auto auto;
+            background-color: rgb(196, 214, 215);
+            padding: 20px;
+            color: white;
+            /* width: clamp(150px, 40vw, 500px); */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .clock{
+            background-color: rgb(85, 106, 124);
+           font-size: 70px;
+           font-weight: 1000;
+            border-radius: 50%;
+            border: 3px solid black;
+            outline: 10px solid rgb(103, 99, 99);
+            text-align: center;
+            padding: 50px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <main class="body">
+        <div class="clock">
+
+        </div>
+
+        <button class="stop" style="padding: 20px; border-radius: 10px; background-color: green; color: white; outline: none; cursor: pointer;">Stop</button>
+    </main>
+
+
+    <!-- js -->
+     <script>
+        let clock = document.querySelector(".clock");
+        let button = document.querySelector(".stop");
+        //logic
+        let timer;//variable that carries the interval id
+      
+
+        function startTimer(h=0,m=0,s=0){
+            timer = setInterval(()=>{
+
+                if (s == 60 ){
+                    m ++;
+                    s -= 60;
+                }
+
+                if (m == 60){
+                    h ++;
+                    m -= 60;
+                }
+
+                if (h ==24){
+                    h=m=s=0;
+                }
+                clock.innerHTML = `<p>${h}  :   ${m}    :   ${s}</p>`;
+                s++;
+
+                
+            },1000)  //in milliseconds
+        }
+
+        startTimer();  //starts from 0 automatically
+        function stopTimer(){
+            clearInterval(timer);
+        }
+
+        button.addEventListener('click',()=>{
+            stopTimer();
+            alert("Clock stopped due to the user's intervention!");
+        })
+
+     </script>
+
+</body>
+</html>

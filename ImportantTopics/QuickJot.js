@@ -44,3 +44,23 @@
 // validateEmail(email);
 
 
+//---------------Date and Time
+// var geeks = new Date(2014, 10, 24, 10, 33, 30, 0); 
+
+// console.log("date: ", geeks);	
+
+// let date1=new Date(2024,6,25), date2= new Date(2024,6,14);  //0 indexing is used, it took 6 as july
+
+// let diff = date2.getDate() - date1.getDate() ;
+// console.log(date2.getDate(), date1.getDate(),diff);
+
+// console.log(new Date());    //while printing, it starts the count from 1
+// console.log(previousMonth.getMonth());
+// console.log(previousMonth);
+
+// if (diff < 0){
+//     let previousMonth = new Date(2024,6,0); //last 0 makes it the last day of previous month
+    // diff += previousMonth.getDate();
+    
+// }
+// console.log(diff);  
