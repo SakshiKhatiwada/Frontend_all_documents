@@ -1,0 +1,75 @@
+/* default */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+/* variable declaration */
+
+:root{
+    --red: rgb(195, 62, 62);
+    --blue: rgb(90, 196, 228);
+    --board-color: rgb(18, 166, 77);
+}
+
+/* styling */
+.container{
+    width: clamp(150px, 40vw, 600px);
+    height: 500px;
+    margin: 20px auto;
+    padding:10px;
+
+    
+}
+
+.container header{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.container header p:hover, .container header i:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: all 0.2s;
+}
+
+/* board */
+.board{
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(30,1fr);
+    grid-template-columns: repeat(30,1fr);
+    outline: 5px solid black;
+    margin-top: 20px;
+    overflow: hidden;
+    background-color: var(--board-color);
+    border-radius: 3px;
+}
+
+.snakeHead,.snakeBody{
+    background-color: var(--blue);
+    border-radius: 20%;
+
+}
+
+.snakeHead{
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    font-size: 3px;
+    color: black;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.snakeFood{
+    background-color: var(--red);
+    border-radius: 20%;
+
+}

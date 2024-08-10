@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="slideContainer">
+        <div class="slide">
+            <img id="slide-1" class="slider" src="./scene1.jpg" alt="">
+            <img id="slide-2" class="slider" src="scene2.jpg" alt="">
+            <img id="slide-3" class="slider" src="scene3.jpg" alt="">
+        </div>
+    </main>
+
+        <div class="nav">
+            <a href="#slide-1" class="aTag"></a>
+            <a href="#slide-2" class="aTag"></a>
+            <a href="#slide-3" class="aTag"></a>
+        </div>
+
+        <section class="scroll">
+
+            <div class="leftScroll" onclick="prev()">
+            </div>
+            <div class="rightScroll" onclick="next()"></div>
+        </section>
+        </body>
+</html>

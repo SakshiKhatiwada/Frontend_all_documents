@@ -1,0 +1,511 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: #fff;
+}
+
+:root {
+    --black: rgb(44, 43, 43);
+    --purple: rgb(97, 47, 177);
+    --grey: rgb(111, 109, 109);
+}
+
+body section{
+    margin: 25px;
+    padding: 15px;
+}
+
+
+.headContainer{
+    background-color: #fff;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    /* background-color: blur; */
+    /* backdrop-filter: blur(8px); */
+
+
+}
+
+
+/* About Page */
+
+.text{
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.headContainer{
+    padding: 10px;
+    margin: 15px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @media (max-width:440px)
+        { 
+            display: block;
+            font-size: 12px;
+            align-items: center;
+            justify-self: space-around;
+            background-color: #b4a5a5;
+            width: 100%;
+            .crescentIcon{
+                display: none;
+            }
+        }
+        
+    
+}
+.menus{
+    margin-right: 10px;
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+}
+
+/* .bodyContainer{
+    display:flex;
+    flex: 1;
+    margin: 0 auto;
+    max-width: 1140px;
+    width: 100%;
+} */
+
+.headings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+h3{
+    color: var(--grey);
+} 
+}
+.bodyContainer{
+    display: flex;
+    margin: 50px;
+    justify-content: space-around;
+    align-items: center;
+
+    @media(max-width: 440px)
+    {
+        flex-direction: column;
+    }
+   
+}
+
+.left img{
+
+    border-radius: 15px;
+    box-shadow: 5px 5px 3px 2px rgba(0,0,0,0.1);
+}
+
+.right{
+    max-width: 50%;
+
+    @media(max-width: 440px){
+        max-width: 100%;
+        margin-top: 10px;
+    }
+
+}
+.right p{
+    font-size: 16px;
+    color: var(--grey)
+}
+
+.experience{
+    display: flex;
+    margin: 20px 0;
+    justify-content: space-between;
+    div{
+        color: var(--grey);
+    }
+    h1,h3{
+        color: black;
+    }
+}
+
+.downloadButton
+{
+    padding: 10px;
+    background-color: var(--purple);
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+@media(max-width: 440px){
+   
+       
+
+    .topLeft{
+        display: none;
+    }
+}
+
+/* for dark mode */
+.dark{
+    background-color: black;
+    color: white !important;
+}
+
+
+
+/* Contact Me page: */
+
+.headContainer{
+    padding: 10px;
+    margin: 15px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @media(max-width: 440px)
+    {
+        display: block;
+        font-size: 12px;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #b4a5a5;
+        width: 100%;
+
+        .crescentIcon, .topLeft{
+            display: none;
+        }
+        
+}
+}
+.menus{
+    margin-right: 15px;
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+}
+
+/* .bodyContainer{
+    display:flex;
+    flex: 1;
+    margin: 0 auto;
+    max-width: 1140px;
+    width: 100%;
+} */
+
+.headings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+h3{
+    color: var(--grey);
+} 
+}
+.bodyContainer{
+    display: flex;
+    margin: 50px;
+    justify-content: space-evenly;
+    
+    /* align-items: center; */
+
+    @media (max-width: 440px)
+    {
+        flex-direction: column-reverse;
+    }
+   
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+  
+    @media (max-width: 440px){
+
+        div {
+            display: flex;
+            
+            input {
+                width: 50%;
+            }
+            
+            
+            textarea{
+                height:0px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.right input,.right textarea{
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    border:1px solid grey;
+    background-color: rgb(171, 171, 215);
+    color: black;
+}
+
+input::placeholder, textarea::placeholder{
+    color: black;
+    font-size: 12px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+}
+
+.left div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    margin: 5px;
+}
+
+
+/* Home */
+
+
+.headContainer{
+    padding: 10px;
+    margin: 15px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menus{
+    margin-right: 15px;
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+  
+}
+
+.phoneNav{
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    display: none;  
+    
+    /* default display none */
+
+    ul{
+        list-style: none;
+    }
+
+    a{
+        text-decoration: none;
+    }
+    
+    @media (max-width: 440px)
+    {
+        display: block;
+        flex-direction:column;
+        width: 100%;
+        background-color: #b4a5a5;
+        
+        /* height: 50px;
+        overflow: scroll; */
+
+        a{
+            color: rgb(0, 0, 0);
+           
+        }
+
+        ul{
+            display: flex;
+            flex-direction: row;
+            /* gap: 8px; */
+            justify-content: space-around;
+            font-size: 12px;
+        }
+    
+       .home 
+        {
+            color:rgb(100, 96, 208);
+        }
+    
+    
+    }
+}
+.bodyContainer{
+    /* border: 1px solid black; */
+    padding: 10px;
+    margin: 15px 10px;
+    /* margin: auto 0; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+    @media(max-width: 440px)
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* for phone */
+    @media (max-width:440px)
+    {
+        .contactMeButton{
+            display:none;
+        }
+
+        .menus, .crescentIcon{
+            display:none;
+        }
+
+    }
+
+
+
+.socialLinks{
+    position: relative;
+    left: 15px;
+    bottom: 200px;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+   
+    @media(max-width: 440px)
+    {
+        flex-direction: row;
+        align-self: end;
+        gap: 5px;
+    }
+}
+
+.profile{
+    margin-bottom:13px;
+    font-size: 20px;
+}
+
+.intro{
+    /* width: 400px; */
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+.intro h1 {
+    font-weight: bold;
+    font-size: 45px;
+}
+
+.intro h2 {
+    /* font-size: 20px; */
+    margin: 8px 0;
+    font-weight: 800;
+    color: var(--grey);
+}
+
+.para{
+    font-size: 14px;
+    color: rgb(90, 85, 85);
+    font-weight: 650;
+}
+
+.contactMeButton {
+    margin: 15px 0;
+    padding: 15px;
+    background-color: var(--purple);
+    color: white;
+    border-radius: 8px;
+    border: none;
+    width: 30%;
+}
+
+.myImg{
+    height: auto;
+    width: 200px;
+    margin-top: 20px;
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+}
+
+
+
+/* ----------SKILLS */
+
+
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: space-evenly;
+    margin: 40px;
+    padding: 30px;
+   /* align-items: center; */
+
+   .up, .down{
+    padding: 10px;
+    margin: 10px;
+    /* border: 1px solid red; */
+
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 15px;
+   }
+}
+
+.frontend, .designer {
+    display: none;
+}
+
+.up:hover,.down:hover{
+    background-color: var(--lightPurple);
+    transition: 0.5s ease;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+.up:hover ~ .frontend, .up:hover~.frontend .progressbar{
+    
+        display: block;
+    
+
+}
+
+.up:hover ~ .designer, .up:hover~.designer .progressbar{
+   
+    display: block;
+
+
+}
+
+/* Styles for those bars */
+.figmam,.canva{
+    display: flex; justify-content: space-between; font-size: 12px;
+    gap: 10px;
+}
+#figma, #css{
+    background-color: rgb(243, 234, 236); height: 5px; border-radius: 4px;
+}
+
+.progressbar{
+    width:20%;background-color:  rgb(216, 192, 255); height: 100%; border-radius: 4px;
+}
+
+.css{
+    width:40%;
+}

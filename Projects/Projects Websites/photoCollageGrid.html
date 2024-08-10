@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Collage</title>
+    <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+
+            main {
+                border: 2px solid grey;
+                /* box-sizing: border-box; */
+                display: grid;
+                margin: 150px 300px;
+                padding: 20px;
+                gap: 20px;
+               grid-template-columns:repeat(3,auto);
+               grid-template-rows: repeat(5,auto);
+            }
+
+            .image1{
+               grid-row: 1/2;
+               grid-column: 1/2;
+            }  
+            .image2{
+                grid-row: 1/2;
+               grid-column: 2/3;
+            } 
+            .image3{
+                grid-row: 1/1.8;
+               grid-column: 3/-1;
+            }
+             .image4{
+                grid-row: 2/3 ;
+               grid-column: 1/2;
+            } 
+            .image5{
+                grid-row: 2/3;
+               grid-column: 2/3;
+            }
+             .image6{
+                grid-row: 2/3;
+               grid-column: 2/3;
+            } 
+            .image7{
+                grid-row: 3/-1;
+               grid-column: 1/2;
+            } 
+            .image8{
+                grid-row:3/4;
+               grid-column:4/3;
+            } 
+            .image9{
+                grid-row: 3/5;
+               grid-column:3/4;
+            }
+             .image10{
+                grid-row:3.9/5;
+               grid-column:3/-1 ;
+            }
+
+
+
+    </style>
+</head>
+<body>
+    <main>
+            <img src="../6.png" alt="image" class="img1">
+            
+            <img src="../2.png" alt="image" class="img2">
+            
+            <img src="../3.png" alt="image" class="img3">
+            
+            <img src="../4.png" alt="image" class="img4">
+            
+            <img src="../5.png" alt="image" class="img5">
+            
+            <img src="../6.png" alt="image" class="img6">
+            
+            <img src="../7.png" alt="image" class="img7">
+            
+            <img src="../8.png" alt="image" class="img8">
+            
+            <img src="../9.png" alt="image" class="img9">
+            
+            <img src="../10.png" alt="image" class="img10">
+
+
+
+
+
+
+
+
+    </main>
+</body>
+</html>

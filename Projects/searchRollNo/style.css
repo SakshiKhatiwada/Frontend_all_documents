@@ -1,0 +1,43 @@
+body{
+    margin: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.input {
+    border: 2px solid black;
+    padding: 10px;
+    max-width: fit-content;
+    color: grey;
+    border-radius: 3px;
+
+}
+
+input{
+    border:none;
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+input:focus{
+        border:none;
+        outline: none;
+}
+
+input::before{
+    content: "🔎";
+}
+.container{
+    border: 2px solid black;
+    padding: 10px;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.container .passedRollNo{
+    background-color: hsl(0, 0%, 95%);
+    padding: 3px;
+    border: 1px solid rgb(201, 201, 201);
+    border-radius: 4px;
+}

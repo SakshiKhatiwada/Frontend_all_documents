@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Format</title>
+
+    <style>
+
+        *{
+            margin: 0; 
+            padding: 0;
+        }
+.container{
+    margin: 0 auto;
+    padding: 10vh 50vh;
+    display: grid;
+    text-align: center;
+    
+    /* justify-content: center; */
+    grid-template-rows: repeat(7,50px);
+    background-color:white;
+    /* color: white; */
+    gap: 5px;
+    border-radius: 5px;
+    
+}
+
+header, menu, footer{
+    background-color: rgb(219, 213, 219);
+    padding: 10px;
+    grid-column-start: 1;
+    grid-column-end: 7;
+   border: 2px solid white;
+   /* grid-row: 1/2; */
+}
+
+.content1 {
+    background-color: rgb(219, 213, 219);
+    grid-column-start: 1;
+    border: 2px solid white;
+    grid-column-end: 3;
+    padding: 10px;
+    
+    grid-row: 3/7;
+}
+
+.main{
+    border: 2px solid white;
+    background-color: rgb(219, 213, 219);
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row: 3/7;
+    padding: 10px;
+}
+.content2{
+    background-color: rgb(219, 213, 219);
+    grid-column-start: 5;
+    grid-row: 3/7;
+    grid-column-end: 7;
+    border: 2px solid white;
+    padding: 10px;
+}
+
+    </style>
+</head>
+<body>
+     <main class="container">
+        <header>Header</header>
+        <menu>Navigation Menu</menu>
+        <div class="content1">Content</div>
+        <div class="main">Main Content</div>
+        <div class="content2">Content</div>
+        <footer>Footer</footer>
+     </main>
+</body>
+</html>

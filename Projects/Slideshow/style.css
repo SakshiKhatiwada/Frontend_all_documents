@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.slideContainer
+{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    /* scrollbar-color: none; */
+    
+}
+
+/* .slideContainer::-webkit-scrollbar{
+    display:none;
+} */
+
+.slide{
+    position: relative;
+    height: 400px;
+    scroll-snap-align: start;
+}
+
+.slide img{
+   flex: 1 0 100%;
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.nav{
+    position: absolute;
+    top: 65%;
+    align-items: center;
+    left: 50%;
+    display: flex;
+    gap: 10px;
+    z-index: 1;
+
+}
+
+.nav a{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #ccc;
+    transition: opacity 0.3s ease;
+    opacity: 50%;
+}
+
+.nav a:active{
+    background: #5a5a5a;
+}
+
+.nav a:focus {
+    background: #807d7d;
+}
+
+.nav a:hover{
+    /* background-color: #bebdbd; */
+    opacity: 75%;
+    cursor: pointer;
+
+}
+
+.scroll {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    top: 30%;
+    padding: 10px;
+    /* border: 2px solid cadetblue; */
+    justify-content: space-between;
+}
+.leftScroll{
+    height: 35px;
+    width: 35px;
+  
+}
+
+.leftScroll::after
+{content: "\2B9C";
+}
+.rightScroll{
+    height: 35px;
+    width: 35px;
+    
+}
+
+.rightScroll::after
+{content: "\2B9E";
+}
+
+.leftScroll, .rightScroll{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30%;
+    /* background-color: #bdbdbd; */
+    
+    /* opacity: 50%; */
+    background: rgba(225, 218, 218, 0.2);
+    transition: background, ease, 0.3s;
+}
+
+.leftScroll:hover, .rightScroll:hover{
+    background: rgba(225, 218, 218,0.5);
+    cursor: pointer;
+}
