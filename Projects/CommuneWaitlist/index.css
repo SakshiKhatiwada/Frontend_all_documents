@@ -1,0 +1,174 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+
+}
+
+
+body {
+padding: 5%;
+background-color: var(--bg_color) ;
+}
+
+div {
+    padding: 2vh;
+}
+
+:root {
+    --grey_color: #616364;
+    --purple_color: #382966;
+    --bg_color:#F6F8FF ;
+}
+
+.earlyAccess, .build, .para {
+    margin: 3px;
+    
+}
+
+.inputEmail {
+    border: 1px solid rgb(176, 170, 170);
+    width: 15vw;
+    margin-right: 8px;
+    font-size: 15px;
+}
+
+.menu, .list1, .list2 {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+
+.list1{
+    display: flex;
+    flex-direction: row;
+   align-items: center;
+   align-items: center;
+   list-style: none;
+   color: var(--purple_color);
+   font-weight: bold;
+   
+}
+
+.list2{
+    margin-left:40vw;
+    display: flex;
+    flex-direction: row;
+   justify-content: space-evenly;
+   align-items: center;
+   list-style: none;
+
+}
+
+.fa-rocket{
+    font-size: 30px;
+}
+
+.listOptions {
+    margin-right: 2vw;
+    color: var(--grey_color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.join,.inputEmail {
+    padding: 18px;
+    border-radius: 8px;
+    color: color;
+}
+
+.commune {
+    color: var(--purple_color);
+    font-weight: bolder;
+        font-family: "Chocolate Classical Sans", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    
+      
+}
+
+/* div{
+    border: 1px solid blue;
+} */
+
+.image{
+   max-width: 100%;
+   height: auto;
+   width: 800px;
+}
+
+.img2 {
+width: 50px;
+height: auto;
+
+
+}
+
+
+.textBody {
+    display: flex;
+    flex-direction: column;
+}
+
+.ImgBody {
+    max-width: 50%;
+    /* border: 1px solid black; */
+
+}
+
+button 
+{
+    background-color: var(--purple_color);
+    color: white;
+    padding: 5px;
+
+  
+}
+
+.earlyAccess{
+border-radius: 15px;
+border:1px solid black;
+padding: 2vh;
+}
+
+.footer {
+    align-self: bottom;
+}
+
+.rocketIcon {
+    height: 10vh;
+    width: 10vh;
+}
+
+.learnMore {
+    color: white;
+}
+
+
+.build {
+   
+    font-size: 3em;
+    font-weight: bold;
+    color: var(--grey_color);
+    font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.companyLogos a i{
+ font-size: 40px;
+ margin-right: 10px;
+}
