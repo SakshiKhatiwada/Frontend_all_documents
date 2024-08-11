@@ -11,6 +11,12 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="about.css">
+
+    <!-- favicon link -->
+     <!-- icon on the tab  -->
+     <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+
 </head>
 <body>
     <!-- header -->
@@ -35,26 +41,9 @@
     </header>
 
      <!-- Home page -->
-     <section id="home">
-            
-        <nav class="phoneNav" >
-            <!-- <div class="menu">
-               &#9776; 
-            </div> -->
 
-            <ul>
-               <li><a  class="home" href="home.html">Home</a></li>
-               <li><a href="about.html">About</a></li>
-               <li><a href="skills.html">Skills</a></li>
-               <li><a href="services.html">Services</a></li>
-               <li><a href="portfolio.html">Portfolio</a></li>
-               <li><a href="contactMe.html">ContactMe</a></li>
-            </ul>
-       </nav>
 
-   </header>
-
-   <div class="bodyContainer">
+   <div class="bodyContainer" id="home">
 
        <div class="intro">
 <h1 class="text"> Hi, I'm Sakshi </h1>
@@ -80,7 +69,7 @@
 
     <!-- About Me page -->
 
-    <section id="aboutMe">
+    <section class="active" id="aboutMe about">
 
         
         <header class="headings white">
@@ -122,48 +111,7 @@
                 
         <hr>
     
-        <!-- Contact Me: -->
-         <section id="contactMe">
-             
-        </header>
-        <div class="headings">
-            <h1>Contact Me</h1>
-            <h3 class="text">Get in touch</h3>
-        </div>  
-        <main class="bodyContainer">
-            <section class="left">
-                <div>
-                    <i class="fa-solid fa-phone"></i>
-<pre>Call Me
-<span class="text">986880XXXX</span></pre>
-                </div>
-                <div>
-                    <i class="fa-solid fa-envelope"></i>
-<pre>Email
-<span class="text">sakshikhatiwada37@gmail.com</span></pre>
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-location-dot"></i>
-<pre>Location
-<span class="text">Mahendranagar,Kanchanpur</span> </pre>
-                        </div>
-                        </section>
-                    
-                    <section class="right">
-                        <div class="Input1">
-                            <input type="text" placeholder="Name">
-                            <input type="email" placeholder="Email">
-                        </div>
-                        
-                        <input type="text" placeholder="Project">
-                        <textarea rows="20" cols="30" type="textarea" placeholder="Message"></textarea>
-                    </section>
-                </section>
-                    
-                </main>
-
-<hr>
-
+     
                 <!-- Skills: -->
                  <section id="skills">
                     
@@ -194,8 +142,8 @@
                 <label for="canva">
                     <div class="canva"> <p>Canva</p><p>40%</p> </div>
                  </label>
-                 <div id="css">
-                 <div class="progressbar css"></div>  
+                 <div id="canva">
+                 <div class="progressbar"></div>  
                  </div>
                  </div>
 
@@ -222,27 +170,29 @@
                 </div>
             </div>
 
-            <div class="frontend">
+            <div class="frontend" >
                 <label for="html">
-                   <div class="html" style="display: flex; justify-content: space-between; font-size: 12px;"> <p>HTML</p><p>80%</p> </div>
+                   <div class="html"> <p>HTML</p><p>80%</p> </div>
                 </label>
-                <div id="html" style="background-color: rgb(243, 234, 236); height: 5px; border-radius: 4px;"><div class="progressbar" style="width:80%;background-color:  rgb(216, 192, 255); height: 100%; border-radius: 4px;"></div></div></div>
+                <div id="html"><div class="progressbar" style="width:80%;"></div></div>
+            </div>
                 
                 <div class="frontend">
                 <label for="css">
-                    <div class="class" style="display: flex; justify-content: space-between; font-size: 12px;margin-top: 6px;"> <p>CSS</p><p>40%</p> </div>
+                    <div class="css"><p>CSS</p><p>40%</p></div>
                  </label>
-                 <div id="css" style="background-color: rgb(243, 234, 236); height: 5px; border-radius: 4px;">
-                 <div class="progressbar" style="width:40%; background-color: rgb(216, 192, 255); height: 100%; border-radius: 4px;"></div>  
+                 <div id="css">
+                 <div class="progressbar"></div>  
                  </div>
                  </div>
 
 
                  <div class="frontend">
                  <label for="js">
-                    <div class="js" style="display: flex; justify-content: space-between; font-size: 12px; margin-top: 6px;"> <p>JS</p><p>20%</p> </div>
+                    <div class="js"> <p>JS</p><p>20%</p> </div>
                  </label>
-                 <div id="js" style="background-color: rgb(243, 234, 236); height: 5px; border-radius: 4px;"><div class="progressbar" style="width:40%; background-color:  rgb(216, 192, 255); height: 100%; border-radius: 4px;"></div>
+                 <div id="js">
+                    <div class="progressbar" style="width:40%;"></div>
                  </div>  </div>
                  
                
@@ -251,6 +201,52 @@
         </section>
     </main>
                  </section>
+
+                 <hr>
+
+
+       <!-- Contact Me: -->
+       <section id="contactMe">
+             
+       </header>
+       <div class="headings">
+           <h1>Contact Me</h1>
+           <h3 class="text">Get in touch</h3>
+       </div>  
+       <main class="bodyContainer">
+           <section class="left">
+               <div>
+                   <i class="fa-solid fa-phone"></i>
+<pre>Call Me
+<span class="text">986880XXXX</span></pre>
+               </div>
+               <div>
+                   <i class="fa-solid fa-envelope"></i>
+<pre>Email
+<span class="text">sakshikhatiwada37@gmail.com</span></pre>
+                   </div>
+                   <div>
+                       <i class="fa-solid fa-location-dot"></i>
+<pre>Location
+<span class="text">Mahendranagar,Kanchanpur</span> </pre>
+                       </div>
+                       </section>
+                   
+                   <section class="right">
+                       <div class="Input1">
+                           <input type="text" placeholder="Name">
+                           <input type="email" placeholder="Email">
+                       </div>
+                       
+                       <input type="text" placeholder="Project">
+                       <textarea rows="20" cols="30" type="textarea" placeholder="Message"></textarea>
+                   </section>
+               </section>
+                   
+               </main>
+
+<hr>
+
                 
                 <!-- script file -->
 <script src="about.js"></script>

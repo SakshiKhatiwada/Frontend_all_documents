@@ -11,6 +11,23 @@
     --black: rgb(44, 43, 43);
     --purple: rgb(97, 47, 177);
     --grey: rgb(111, 109, 109);
+    --lightPurple: rgb(153, 116, 212);
+    --progressBar: rgb(216, 192, 255);
+    --background-color: rgb(243, 234, 236);
+}
+
+
+
+.text{
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: var(--grey);
+}
+
+
+a:active{
+    color: red;
 }
 
 body section{
@@ -468,12 +485,32 @@ input:focus, textarea:focus {
    }
 }
 
+/* designing those blocks */
+
+.js,.css{
+    display: flex; justify-content: space-between; 
+    font-size: 12px; margin-top: 6px;
+}
+
+#js{
+    background-color: rgb(243, 234, 236); height: 5px; border-radius: 4px;
+}
+
+.html{
+    display: flex; justify-content: space-between; font-size: 12px;
+}
+
+#html{
+    background-color: rgb(243, 234, 236); height: 5px; border-radius: 4px;
+}
+
+
 .frontend, .designer {
     display: none;
 }
 
 .up:hover,.down:hover{
-    background-color: var(--lightPurple);
+   
     transition: 0.5s ease;
     box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.3);
     cursor: pointer;
@@ -493,17 +530,24 @@ input:focus, textarea:focus {
 
 }
 
+
 /* Styles for those bars */
-.figmam,.canva{
-    display: flex; justify-content: space-between; font-size: 12px;
+.figma,.canva{
+   
+    display: flex; justify-content: space-between;
+     font-size: 14px;
     gap: 10px;
 }
-#figma, #css{
-    background-color: rgb(243, 234, 236); height: 5px; border-radius: 4px;
+
+
+#figma, #css,#canva{
+    background-color:var(--background-color); 
+    height: 5px; border-radius: 4px;
 }
 
 .progressbar{
-    width:20%;background-color:  rgb(216, 192, 255); height: 100%; border-radius: 4px;
+    width:20%;background-color: var(--progressBar);
+    height: 100%; border-radius: 4px;
 }
 
 .css{
