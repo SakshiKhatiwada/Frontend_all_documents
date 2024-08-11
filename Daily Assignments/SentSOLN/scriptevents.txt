@@ -1,0 +1,11 @@
+
+
+let button = document.querySelector("#btn");
+
+button.addEventListener("click", function(){
+    console.log("button clicked");
+    document.body.classList.toggle("dark");
+});
+
+
+

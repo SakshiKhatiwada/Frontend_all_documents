@@ -1,0 +1,75 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+/* Accordion Container */
+.accordion-container {
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Accordion Question Styles */
+.question {
+  background-color: #f1f1f1;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+  margin-bottom: 10px;
+  position: relative; 
+}
+
+.question p {
+  margin: 0;
+}
+
+.question:hover,
+.question.active {
+  background-color: #e2e2e2;
+}
+
+.question::after {
+  content: "\2795";
+  /* content: "+"; not same as above */ 
+  font-size: 13px;
+  color: #777;
+  position: absolute; 
+  /* parents ko boundary reference linxa */
+  top: 50%;
+  right: 15px; 
+  transform: translateY(-50%);
+}
+
+.active::after {
+  content: "\2796";
+}
+
+/* Accordion Answer Styles */
+.answer {
+  background-color: #fafafa;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  border-top: none;
+  display: none;
+  overflow: hidden;
+  margin-bottom: 10px;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  max-height: 0;
+}
+
+.answer p {
+  margin: 0;
+}
+
+/* Active State Styles */
+.active + .answer {
+  display: block;
+  padding: 15px;
+  max-height: max-content; 
+}
+
+

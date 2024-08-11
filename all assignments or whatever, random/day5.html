@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    .label{
+        color: blue;
+    }
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <form>
+            <label class="label" for="email">Email </label>
+            <input id="email" type="email"placeholder="Email or Phone number">
+
+<label class="label" for="password"> Password </label>
+            <input id="password" type="password" placeholder="Password">
+
+<label class="label" for="time">Date of Birth </label>
+            <input id="time" type="datetime-local">
+
+<label class="label" for="login">Login </label>
+            <input id="login" type="button" value="login">
+        </form>
+
+    </div>
+
+    <br>
+
+    <div>
+        <p> Choose Gender</p>
+        <form class="radiobuttons">
+            <label for="male">Male:</label>
+            <input name="gender" type="radio" id="male" value="Male">
+
+            <label for="female">Female:</label>
+            <input name="gender" type="radio" id="female" value="Female">
+        </form>
+    </div>
+
+    <br>
+    <div>
+        <p>Choose your favourite language</p>
+        <form class="checkboxbuttons">
+
+            <label for="py">Python: </label>
+            <input name="one" type="checkbox" id="py">
+
+            <label for="js">Javascript: </label>
+            <input name="two" type="checkbox" id="js">
+
+
+        </form>
+    </div>
+</body>
+</html>

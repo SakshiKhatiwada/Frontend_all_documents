@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="Accordion.css">
+</head>
+<body>
+    <main class="container">
+        <input type="checkbox" id="box1" class="checkbox" style="display:none;">
+        <label for="box1" class="question">
+            
+            <p>What is the purpose of the "let" keyword in JS?</p>
+            <i class="fa-solid fa-plus"></i>
+            
+        </label>
+        <div class="answer">
+            The let keyword is used to declare block scoped variables, allowing the variable to be limited in the scope to the block, statement, or expression in which it is used.
+        </div>
+        
+        <input type="checkbox" id="box2" class="checkbox" style="display:none;">
+        <label for="box2" class="question">
+            <p>How do you create a function in JS?</p>
+            <i class="fa-solid fa-plus"></i>
+        </label>
+
+        <div class="answer">
+            A function in JS can be created using the function keyword followed by a name, parenthesis () for parameters, and curly braces {} for the function call.
+        </div>
+
+        <input type="checkbox" id="box3" class="checkbox" style="display:none;">
+        <label for="box3" class="question">
+            <p>What is an arrow function and how is it different from a regular function?</p>
+            <i class="fa-solid fa-plus"></i>
+        </label>
+        <div class="answer">
+           An arrow function is a shorter syntax for writing functions using the => syntax. It doesn't have its own context.
+        </div>
+
+
+        <input type="checkbox" id="box4" class="checkbox" style="display:none;">
+        <label for="box4" class="question">
+            <p>How do you handle asynchronous operations in JS?</p>
+            <i class="fa-solid fa-plus"></i>
+        </label>
+        <div class="answer">
+           Asynchronous operations in JS can be handled using callbacks, promises. (.then() and .catch() methods). or async/await syntax for cleaner and more readable code. Example: using async/await
+        </div>
+
+
+        <input type="checkbox" id="box5" class="checkbox" style="display:none;">
+        <label for="box5" class="question">
+            <p>What is the difference between == and === in js</p>
+            <i class="fa-solid fa-plus"></i>
+        </label>
+        <div class="answer">
+            The == operator performs loose equality comparison, allowing type conversion, while the === operator performs strict equality comparison without type conversion.
+        </div>
+    </main>
+</body>
+</html>

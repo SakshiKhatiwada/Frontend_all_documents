@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+        .calculator{
+            background-color: skyblue;
+            width: fit-content;
+            margin: 0 auto;
+        }
+        input[type='text']{
+            width: 100%;
+            padding: 10px;
+
+        }
+        input[type='button']{
+            padding: 20px;
+
+        }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <form class="form">
+        <input type="text" name="question" id="qn" />
+        <br>
+        <input type="text" name="answer" id="ans" />
+      </form>
+      <form>
+        <div>
+          <input type="button" value="1" />
+          <input type="button" value="2" />
+          <input type="button" value="3" />
+          <input type="button" value="4" />
+          <input type="button" value="+" />
+        </div>
+        <div>
+          <input type="button" value="5" />
+          <input type="button" value="6" />
+          <input type="button" value="7" />
+          <input type="button" value="8" />
+          <input type="button" value="-" />
+        </div>
+        <div>
+          <input type="button" value="*" />
+          <input type="button" value="/" />
+          <input type="button" value="^" />
+          <input type="button" value="√" />
+          <input type="button" value="(" />
+          <input type="button" value=")" />
+        </div>
+        <div>
+          <input type="button" value="9" />
+          <input type="button" class="special" value="ac" onclick="ac()" />
+          <input type="button" class="special" value="del" onclick="del()" />
+          <input type="button" class="special" value="=" onclick="calculate()" />
+        </div>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

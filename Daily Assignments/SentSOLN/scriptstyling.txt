@@ -1,0 +1,77 @@
+
+
+let div = document.createElement("div");
+
+div.innerText = "This is div";
+div.className = "container";
+document.body.appendChild(div);
+
+// div.className = "styled";
+div.classList.add("styled");
+
+
+// xa vane hatau 
+// xaina vane rakha
+// div.classList.toggle("styled");
+// div.classList.toggle("dark");
+// let xaRw = div.classList.contains("container");
+// console.log(xaRw);
+// div.classList.remove("styled");
+
+
+// div.classList.add("styled");
+
+// div.style.backgroundColor = "#c3c3f1";
+// div.style.padding = "20px";
+// div.style.fontSize = "2rem";
+
+
+div.innerHTML = "<p style='display: none;'>This is p inside div</p> outdide p tag";
+
+let text = div.innerText;
+let text2 = div.textContent;
+let text3 = div.innerHTML;
+
+// innerText follows css and gives text
+// textContent gives text only
+
+// console.log(text);
+// console.log(text2);
+// console.log(text3);
+
+
+let wrapper = document.querySelector(".wrapper");
+let noOfElements = wrapper.getAttribute("data-noOfElements");
+let message = wrapper.getAttribute("data-message");
+wrapper.setAttribute("data-message2", "Hiiii");
+wrapper.removeAttribute('message2');
+let isThere = wrapper.hasAttribute("message");
+
+
+console.log(noOfElements);
+console.log(message);
+console.log(isThere);
+
+
+// data prefixed attributes
+console.log(wrapper.dataset.noofelements);
+
+
+
+// all attributes 
+console.log(wrapper.attributes);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

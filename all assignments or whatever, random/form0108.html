@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+
+    <style>
+        #details{
+            display: flex;
+    justify-content: space-between; /* Aligns items to each end of the container */
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+        
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+<legend>Employee Details</legend>
+<br>
+            <label  for="name">First Name: </label>
+            <input class="details" type="text" id="name" required >
+            <br>
+            <br>
+            <label for="lastname">Last Name:</label>
+            <input class="details" type="text" id="lastname">
+            <br>  <br>
+            
+            <input class="details" type="radio" name="gender">
+            <label for="gender">Male</label>
+            
+            <input class="details" type="radio" name="gender">
+            <label for="gender">Female</label>
+            <br>  <br>
+            
+            <label for="emid">Employee ID:</label>
+            <!-- <input class="details" type="text" id="emid" list="ids"> -->
+            <!-- <datalist id="ids"> -->
+                <select id="emid">
+                    <optgroup label="Employee 1"> 
+                        
+                        <option value="1001">1001 </option>
+                        <option value="1002">1002</option>
+                    </optgroup>
+                    
+                    <optgroup label="Employee 2">  
+                        <option value="1003">1003</option> 
+                        <option value="1004">1004</option>
+                    </optgroup>
+                </select>
+                <!-- </datalist> -->
+                
+                <br>  <br>
+            
+            
+            <label for="desn">Designation:</label>
+            <input class="details" type="text" id="desn">
+            <br>  <br>
+            
+            
+            <label for="ph">Phone Number:</label>
+            <input class="details" type="number" id="ph">
+            <br>  <br>
+            
+            <input type="button" value="submit" >
+            <!-- onclick="alert('form submitted')"> -->
+        </fieldset>
+        </form>
+
+</body>
+</html>

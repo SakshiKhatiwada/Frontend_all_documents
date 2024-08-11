@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabs</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+  </head>
+
+  <body>
+    <main class="container">
+      <!-- Tab links -->
+      <div class="tab">
+        <div class="tab">
+          <button
+            class="tablink"
+            onclick="openTab(event, 'react')"
+            id="defaultTab"
+          >
+            React
+          </button>
+          <button class="tablink" onclick="openTab(event, 'vue')">Vue</button>
+          <button class="tablink" onclick="openTab(event, 'angular')">
+            Angular
+          </button>
+        </div>
+      </div>
+
+      <!-- Tab Content -->
+      <div id="react" class="tabcontent">
+        <h3>React</h3>
+        <p>
+          Developed by Facebook, React is a popular library for building user
+          interfaces, especially single-page applications. It emphasizes a
+          component-based architecture, allowing developers to create reusable
+          UI components.
+        </p>
+      </div>
+      <div id="vue" class="tabcontent">
+        <h3>Vue</h3>
+        <p>
+          Created by Evan You, Vue.js is a progressive framework for building
+          user interfaces. It is designed to be incrementally adoptable, meaning
+          you can use as much or as little of Vue as needed.
+        </p>
+      </div>
+      <div id="angular" class="tabcontent">
+        <h3>Angular</h3>
+        <p>
+          Maintained by Google, Angular is a comprehensive framework for
+          building web applications. It provides a full-featured platform
+          including tools and libraries for routing, forms, client-server
+          communication, and more.
+        </p>
+      </div>
+    </main>
+  </body>
+</html>

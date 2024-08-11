@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Download Images</title>
+    <style>
+      body {
+        background: rgb(118, 118, 249);
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      form {
+        min-width: 500px;
+        padding: 40px 30px;
+        background-color: #fff;
+        border-radius: 10px;
+        display: flex;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      label {
+        font-size: 1.6rem;
+      }
+      #imageInput {
+        padding: 5px 10px;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid black;
+      }
+      #submit {
+        padding: 20px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: rgb(150, 105, 233);
+        color: #fff;
+        font-size: 1rem;
+        letter-spacing: 0.5px;
+        border: 1px solid black;
+        border: none;
+        outline: none;
+        opacity: 0.9;
+      }
+      input[type="submit"]:hover {
+        opacity: 1;
+      }
+      #image {
+        max-height: 350px;
+        background-position: center;
+        background-size: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="image_url">Downlaod Image</label>
+      <input type="text" id="imageInput" list="imageUrls" placeholder="URL of image" required />
+      <datalist id="imageUrls">
+        <option value="https://cdn.pixabay.com/photo/2022/11/10/00/57/lake-7581726_1280.jpg">
+        <option value="https://cdn.pixabay.com/photo/2023/06/22/16/34/campfire-8081877_1280.jpg">
+        <option value="https://cdn.pixabay.com/photo/2023/07/13/06/59/canyon-8124036_1280.jpg">
+        <option value="https://cdn.pixabay.com/photo/2020/06/24/19/50/garden-5337535_1280.jpg">
+      </datalist>
+      <input type="submit" id="submit" value="Download" />
+      <img id="image" src="" />
+    </form>
+    <script>
+      let form = document.querySelector("form");
+      let input = document.querySelector("#imageInput");
+      let img = document.querySelector("#image");
+      let submit = document.querySelector("#submit");
+
+      input.addEventListener("blur", function () {
+        img.src = input.value;
+      });
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        imageUrl = input.value;
+        img.src = imageUrl;
+        try {
+          submit.value = "Downloading...";
+          downloadImage(imageUrl);
+          submit.value = "Image downloaded";
+        } catch (error) {
+          alert("Error downloading the image:");
+        }
+        setTimeout(() => {
+          submit.value = "Download";
+        }, 2000);
+      });
+
+      async function downloadImage(imageUrl, nameOfDownload = "my-image.png") {
+        const response = await fetch(imageUrl);
+
+        const blobImage = await response.blob();
+
+        const href = URL.createObjectURL(blobImage);
+
+        const anchorElement = document.createElement("a");
+        anchorElement.href = href;
+        anchorElement.download = nameOfDownload;
+
+        document.body.appendChild(anchorElement);
+        anchorElement.click();
+
+        document.body.removeChild(anchorElement);
+        window.URL.revokeObjectURL(href);
+      }
+    </script>
+  </body>
+</html>

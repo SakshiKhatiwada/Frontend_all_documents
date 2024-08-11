@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    height: 10vh;
+
+    ul{
+        display: flex;
+        gap: 13px;
+        list-style: none;
+
+        a{
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+          text-align: center;
+          transition: 0.15s ease-in-out;
+            position: relative;
+            text-transform: uppercase;
+
+        }
+
+        a::after{
+            content:"";
+            position: absolute;
+            bottom:0;
+            left:0;
+            width: 0;
+            height: 1px;
+            background-color: rgb(253, 253, 253);
+            transition: 0.3s ease-in-out;
+        }
+
+        a:hover::after{
+           width: 100%;
+        }
+    }
+}

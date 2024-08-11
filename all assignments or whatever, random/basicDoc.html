@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Document</title>
+
+    <style>
+        .doc {
+        padding: 10px;
+    }
+    .container{
+        border: 1px solid black;
+     width: 500px;
+     height: 500px;
+        margin: 0 auto;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        /* align-content: center; */
+    }
+
+    .doc {
+        border: 1px solid black;
+    }
+    .container2{
+        display: flex;
+        gap: 10px;
+        /* justify-content:space-between; */
+
+    }
+
+    .container1{
+        display: flex;
+        gap: 10px;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+            
+        <div class="head" id="header" style="background-color: skyblue;">Header</div>
+
+        <div class="container1">
+        <div style="background-color: lavender;width: 100px; height: 100px;" class="doc" id="Hero">Hero</div>
+        
+        <div style="background-color: rgb(179, 209, 27);width:60%; height: 100px);"  class="doc" id="MainCon">Main Content</div>
+    </div> 
+
+    <div class="contained">
+
+        <div style="background-color:lightgreen;" class="doc" id="Sidebar">Sidebar</div>
+        <div style="background-color: grey;" class="doc" id="ExtraCon">Extra Content</div>
+        
+    </div>
+    <div class="container2">
+    <div style="background-color:green; width: 70%;" class="doc" id="RelIm">Related Images</div>
+
+    <div style="background-color: Pink;" class="doc" id="Related">Related Posts</div>
+    </div>
+    <div style="background-color: Orange;" class="footer" id="footer">Footer</div>
+</div>
+</body>
+</html>

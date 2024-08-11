@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input{
+            margin: 0 auto;
+            padding: 15px;
+            outline: none;
+            border: 1px solid grey;
+        }
+    </style>
+</head>
+<body>
+    
+    <input type="email" placeholder="enter your email:" class="email">
+
+
+    <script>
+        let regex = /([a-z_0-9]+)@[a-z]*\.com/gi
+        let email = document.querySelector(".email");
+
+        email.addEventListener('input',()=>{
+
+            if (email.value.match(regex))
+            {
+                console.log("valid email id");
+            }
+
+            else {
+        console.log("invalid email");
+    }
+})
+    </script>
+    
+</body>
+</html>

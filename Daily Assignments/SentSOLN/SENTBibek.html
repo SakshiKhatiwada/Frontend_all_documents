@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Textarea</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    /* Basic styling */
+textarea {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical; /* Allows vertical resizing only */
+}
+
+/* Placeholder styling */
+textarea::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+/* Focus styling */
+textarea:focus {
+    border-color: #66afe9;
+    outline: none;
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+/* Disabled styling */
+textarea:disabled {
+    background-color: #e9ecef;
+    color: #6c757d;
+}
+
+/* Hover effect */
+textarea:hover {
+    border-color: #888;
+}
+
+/* Custom scrollbar for webkit browsers */
+textarea::-webkit-scrollbar {
+    width: 15px;
+}
+
+textarea::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    /* background: #888; */
+    border-radius: 6px;
+    background: rgb(125, 65, 75);
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+    background: #8865b4;
+}
+
+    </style>
+</head>
+<body>
+    <form>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="10" cols="50"></textarea>
+    </form>
+</body>
+</html>
