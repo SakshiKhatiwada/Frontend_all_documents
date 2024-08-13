@@ -12,9 +12,8 @@
 
     <link rel="stylesheet" href="about.css">
 
-    <!-- favicon link -->
-     <!-- icon on the tab  -->
-     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- favicon link : icon on the top of the tab  -->
+     <link rel="icon" href="icon.png" type="image/png" size="16px*16px">
 
 
 </head>
@@ -39,6 +38,19 @@
             </div>
         
     </header>
+    
+    <!-- hamburger menu -->
+    <header class="hamburger-menu"><i class="fa-solid fa-bars"></i></header>
+        <div class="menu hideMenu">
+            <nav class="navigation">
+                <a class="home menus text" href="#home">Home</a>
+                <a href="#about" class="about menus text">About</a>
+                <a href="#skills" class="skills menus text">Skills</a>
+                <a href="#services" class="services menus text">Services</a>
+                <a href="#portfolio" class="portfolio menus text">Portfolio</a>
+                <a href="#contactMe" class="contactMe menus text">ContactMe</a>
+            </nav>
+        </div>
 
      <!-- Home page -->
 
@@ -119,85 +131,81 @@
         <h1>Skills</h1>
         <h3 class="text">My technical level</h3>
     </div>
-    <main class="main">
+
+    <main class="Skills">
         <section class="left">
             <div class="up">
             
                 <i class="fa-brands fa-figma"></i>
            
-            <div>
+            <section>
                 <h3>Designer</h3>
                 <h5 class="text">More than 2 years</h5>
+            </section>
+        </div>
+
+        <div class="block">
+            <div class="data"><p>Figma</p><p>20%</p></div>
+            <div class="Bar" style="width: 100%;">
+                <div class="progressbar" style="width: 20%;"></div>
             </div>
         </div>
 
-            <div class="designer">
-                <label for="figma">
-                   <div class="figma"><p>Figma</p><p>20%</p> </div>
-                </label>
-                <div id="figma"><div class="progressbar"></div></div></div>
-                
-                
-            <div class="designer">
-                <label for="canva">
-                    <div class="canva"> <p>Canva</p><p>40%</p> </div>
-                 </label>
-                 <div id="canva">
-                 <div class="progressbar"></div>  
-                 </div>
-                 </div>
 
-
-            
+  <div class="block">
+            <div class="data"><p>Canva</p><p>40%</p></div>
+            <div class="Bar" style="width:100%;"><div class="progressbar" style="width: 40%;"></div>
+            </div>
+        </div>
+    
+        
+        <!-- section left down -->
 
             <div class="down">
                 <i class="fa-solid fa-laptop-code"></i>
-                <div>
+                <section>
                 <h3>Backend Developer</h3>
                 <h5 class="text">Starting out</h5>
-            </div>
+                </section>
 
             </div>
         </section>
 
+        <!-- section right -->
+
         <section class="right">
-            <div class="up">
+            <div class="down">
                
                 <i class="fa-solid fa-code"></i> 
-                <div>
-                <h3>Frontend</h3>
+                
+                <section>
+                    <h3>Frontend</h3>
                 <h5 class="text">More than 3 years</h5>
+                </section>
+                
+            </div>
+
+            <div class="block">
+                <div class="data"><p>HTML</p><p>80%</p></div>
+                <div class="Bar" style="width:100%;"><div class="progressbar" style="width: 80%;"></div>
                 </div>
             </div>
-
-            <div class="frontend" >
-                <label for="html">
-                   <div class="html"> <p>HTML</p><p>80%</p> </div>
-                </label>
-                <div id="html"><div class="progressbar" style="width:80%;"></div></div>
-            </div>
+        
                 
-                <div class="frontend">
-                <label for="css">
-                    <div class="css"><p>CSS</p><p>40%</p></div>
-                 </label>
-                 <div id="css">
-                 <div class="progressbar"></div>  
-                 </div>
-                 </div>
+            <div class="block">
+                <div class="data"><p>CSS</p><p>60%</p></div>
+                <div class="Bar" style="width:100%;"><div class="progressbar" style="width: 60%;"></div>
+                </div>
+            </div>
+        
 
-
-                 <div class="frontend">
-                 <label for="js">
-                    <div class="js"> <p>JS</p><p>20%</p> </div>
-                 </label>
-                 <div id="js">
-                    <div class="progressbar" style="width:40%;"></div>
-                 </div>  </div>
-                 
+            <div class="block">
+                <div class="data"><p>JS</p><p>40%</p></div>
+                <div class="Bar" style="width:100%;"><div class="progressbar" style="width: 40%;"></div>
+                </div>
+            </div>
+        
                
-                
-            </div>
         </section>
     </main>
                  </section>

@@ -26,6 +26,67 @@
 }
 
 
+/* hamburger menu */
+.hamburger-menu{
+    /* display:none; */
+    position: fixed;
+    top: 25px;
+    left: 15px;
+    font-size: 22px;
+    background-color: #fff;
+    color: #1f1f1f;
+    cursor: pointer;
+}
+
+
+.hamburger-menu i{
+    z-index: 2;
+
+}
+
+.iconClicked{
+    color: white;
+    background-color: #1f1f1f;
+    /* position: fixed;
+    top: 25px; */
+}
+
+.menu{
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    width: 200px;
+    height: 100%;
+    background-color: #1f1f1f;
+}
+
+.hideMenu{
+    display: none;
+
+}
+.navigation{
+
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #1f1f1f;
+    padding: 10px;
+    
+    a{
+        background-color: #1f1f1f;
+        color: rgb(236, 233, 233);
+    }
+    
+}
+
+
+
+
+
+
+
+
 a:active{
     color: red;
 }
@@ -45,9 +106,24 @@ body section{
     /* background-color: blur; */
     /* backdrop-filter: blur(8px); */
 
+    padding: 10px;
+    margin: 15px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
+        
 }
 
+
+@media (max-width:440px)
+{ 
+    .headContainer,.nav{
+
+        display: none;
+    }
+    
+}
 
 /* About Page */
 
@@ -57,28 +133,7 @@ body section{
     font-style: normal;
 }
 
-.headContainer{
-    padding: 10px;
-    margin: 15px 0px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 
-    @media (max-width:440px)
-        { 
-            display: block;
-            font-size: 12px;
-            align-items: center;
-            justify-self: space-around;
-            background-color: #b4a5a5;
-            width: 100%;
-            .crescentIcon{
-                display: none;
-            }
-        }
-        
-    
-}
 .menus{
     margin-right: 10px;
     text-decoration: none;
@@ -168,7 +223,7 @@ h3{
 
 /* for dark mode */
 .dark{
-    background-color: black;
+    background-color: black !important;
     color: white !important;
 }
 
@@ -279,8 +334,6 @@ input:focus, textarea:focus {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 15px;
-    margin: 5px;
 }
 
 
@@ -322,13 +375,7 @@ input:focus, textarea:focus {
     
     @media (max-width: 440px)
     {
-        display: block;
-        flex-direction:column;
-        width: 100%;
-        background-color: #b4a5a5;
         
-        /* height: 50px;
-        overflow: scroll; */
 
         a{
             color: rgb(0, 0, 0);
@@ -359,26 +406,45 @@ input:focus, textarea:focus {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    
-    @media(max-width: 440px)
-    {
-        flex-direction: column;
-        align-items: center;
+   
+}
+
+
+/* for phone */
+@media(max-width: 440px)
+{
+
+    .hamburger-menu{
+        display: block;
+    }
+   .bodyContainer{
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+   }
+
+   .experience div{
+    display: flex;
+    flex-direction: column;
+    margin: 4px;
+   }
+
+
+   /* display none */
+   .contactMeButton , .headContainer{
+    display:none;
+   }
+
+    .sidebar{
+        flex-direction: row;
+        align-self: end;
+        gap: 5px;
     }
 }
 
-/* for phone */
-    @media (max-width:440px)
-    {
-        .contactMeButton{
-            display:none;
-        }
 
-        .menus, .crescentIcon{
-            display:none;
-        }
+    
 
-    }
 
 
 
@@ -391,13 +457,7 @@ input:focus, textarea:focus {
 .sidebar{
     display: flex;
     flex-direction: column;
-   
-    @media(max-width: 440px)
-    {
-        flex-direction: row;
-        align-self: end;
-        gap: 5px;
-    }
+
 }
 
 .profile{
@@ -464,92 +524,81 @@ input:focus, textarea:focus {
     align-items: center;
 }
 
-.main {
+.Skills {
     display: flex;
-    /* border: 1px solid red; */
     justify-content: space-evenly;
     margin: 40px;
     padding: 30px;
-   /* align-items: center; */
 
-   .up, .down{
-    padding: 10px;
-    margin: 10px;
-    /* border: 1px solid red; */
 
+}
+/* skill section */
+@media (max-width: 440px){
+   .Skills{
+    flex-direction: column;
+    margin: 2px;
+   }
+       
+   }
+
+.Skills .up, .Skills .down{
     display: flex;
     flex-direction: row;
-    /* justify-content: center; */
     align-items: center;
-    gap: 15px;
    }
-}
+
+   .down section, .up section{
+    display: flex;
+    flex-direction: column;
+   }
+
+
 
 /* designing those blocks */
 
-.js,.css{
-    display: flex; justify-content: space-between; 
-    font-size: 12px; margin-top: 6px;
-}
-
-#js{
-    background-color: rgb(243, 234, 236); height: 5px; border-radius: 4px;
-}
-
-.html{
-    display: flex; justify-content: space-between; font-size: 12px;
-}
-
-#html{
-    background-color: rgb(243, 234, 236); height: 5px; border-radius: 4px;
+.block{
+    display:flex;
+    flex-direction: column !important;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    display: none !important;
+    opacity: 0;
+  
 }
 
 
-.frontend, .designer {
-    display: none;
-}
-
-.up:hover,.down:hover{
-   
-    transition: 0.5s ease;
-    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.3);
+.up:hover, .down:hover{
+    transition: all 0.25s ease-in-out;
     cursor: pointer;
+    box-shadow: 4px 4px 5px rgba(0,0,0,0.1);
+    border-radius: 3px;
 }
-
-.up:hover ~ .frontend, .up:hover~.frontend .progressbar{
+.up:hover ~ .block, .down:hover ~ .block{
+    transition: all 0.25s ease-in-out;
+    display: block !important;
+    opacity: 1;
     
-        display: block;
+}
+
+.data{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
     
-
-}
-
-.up:hover ~ .designer, .up:hover~.designer .progressbar{
-   
-    display: block;
-
-
-}
-
-
-/* Styles for those bars */
-.figma,.canva{
-   
-    display: flex; justify-content: space-between;
-     font-size: 14px;
-    gap: 10px;
-}
-
-
-#figma, #css,#canva{
-    background-color:var(--background-color); 
-    height: 5px; border-radius: 4px;
 }
 
 .progressbar{
-    width:20%;background-color: var(--progressBar);
-    height: 100%; border-radius: 4px;
+    height: 100%;
+    border-radius: 9px;
+    background-color: var(--progressBar);
+    /* border: 1px solid var(--grey); */
+    
 }
 
-.css{
-    width:40%;
+.Bar{
+    margin-top: 8px;
+    padding: 0px;
+    height: 6px;
+    border: 1px solid var(--grey);
+    border-radius: 9px;
 }
