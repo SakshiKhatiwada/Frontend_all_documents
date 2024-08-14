@@ -22,17 +22,35 @@
 //for hamburger menu
 let menu = document.querySelector(".fa-bars");
 let navMenu = document.querySelector(".menu");
-
+let bodyContainer = document.querySelectorAll(".bodyContainer");
+let backIcon = document.querySelector(".fa-arrow-left");
 
 menu.addEventListener('click',(event)=>{
     event.stopPropagation();
-    navMenu.classList.toggle("hideMenu");
-    menu.classList.toggle("iconClicked");
+    navMenu.classList.remove("hideMenu");
+    navMenu.classList.remove("hidden");
+    navMenu.classList.add("showMenu");
+    navMenu.style.display = "block";
     
 })
 
-window.addEventListener('click', ()=>{
-    navMenu.classList.add("hideMenu");
-    menu.classList.toggle("iconClicked");
+window.addEventListener('click', (event)=>{
+
+    console.log(event);
+   
+    if(event.target == backIcon || this && event.target != navMenu){
+
+        navMenu.classList.add("hideMenu");
+        navMenu.classList.remove("showMenu");
+        
+        navMenu.classList.add("hidden");
+
+        setTimeout(()=>{
+            navMenu.style.display ="none";
+        },4000);
+    }
+   
 
 })
+
+
