@@ -192,13 +192,6 @@ body section{
     font-weight: bold;
 }
 
-/* .bodyContainer{
-    display:flex;
-    flex: 1;
-    margin: 0 auto;
-    max-width: 1140px;
-    width: 100%;
-} */
 
 .headings {
     display: flex;
@@ -253,7 +246,7 @@ h3{
     }
 }
 
-.downloadButton
+.downloadButton, .send
 {
     padding: 10px;
     background-color: var(--purple);
@@ -261,6 +254,11 @@ h3{
     border: none;
     font-weight: bold;
     border-radius: 8px;
+}
+
+.send{
+    background-color: rgb(44, 186, 44);
+    align-self: flex-end;
 }
 
 @media(max-width: 440px){
@@ -582,10 +580,10 @@ input:focus, textarea:focus {
 /* skill section */
 @media (max-width: 440px){
    .Skills{
-    flex-direction: column;
-    margin: 2px;
-   }
-       
+       flex-direction: column;
+       margin: 2px;
+}
+
    }
 
 .Skills .up, .Skills .down{
@@ -595,10 +593,10 @@ input:focus, textarea:focus {
    }
 
    .down section, .up section{
-    display: flex;
-    flex-direction: column;
-}
-
+   display: flex;
+       flex-direction: column;
+       
+    }
 .down, .up{
     box-sizing: border-box;
     width: fit-content;
@@ -654,3 +652,9 @@ input:focus, textarea:focus {
     border: 1px solid var(--grey);
     border-radius: 9px;
 }
+
+
+/* submit button for information */
+
+
+

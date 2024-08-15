@@ -36,21 +36,33 @@ menu.addEventListener('click',(event)=>{
 
 window.addEventListener('click', (event)=>{
 
-    console.log(event);
    
-    if(event.target == backIcon || this && event.target != navMenu){
+    if (navMenu.classList.contains("showMenu"))
+    {
+        if(event.target == backIcon || this && event.target != navMenu){
 
         navMenu.classList.add("hideMenu");
         navMenu.classList.remove("showMenu");
         
         navMenu.classList.add("hidden");
-
+        
         setTimeout(()=>{
             navMenu.style.display ="none";
         },4000);
-    }
-   
+        }
+}
 
 })
 
+
+// for contact information
+let sendButton = document.querySelector(".send");
+let inputs = document.querySelectorAll("input");
+
+sendButton.addEventListener('click',()=>{
+for (let i=0; i< inputs.length; i++)
+{
+    console.log(inputs[i].value);
+}
+})
 
