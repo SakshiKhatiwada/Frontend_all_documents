@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* .container div, div{
+            border: 1px solid red;
+            padding: 20px;
+            font-size: 20px;
+            width: 250px;
+            height: 60px; */
+            
+        /* } */
+        
+        /* .container{
+            display:flex;
+            gap: 30px;
+            flex-direction: column;
+            background-color: pink; */
+            
+                        /* @media (max-width: 440px){
+                           flex-direction: column; 
+                        } */
+
+                         /* @media (min-width: 440px){
+                           flex-direction: row; 
+                        } */
+        /* } */
+
+        /* @media(max-width: 440px){
+            .container{
+                flex-direction: column;
+               
+            } */
+/* 
+            .container2{
+
+            } */
+        /* } */
+
+
+
+    </style>
+</head>
+<body>
+    <!-- <div>1</div>
+    <div>2</div>    
+
+    <button style="padding: 20px; border: 2px solid red;
+    position: sticky;
+    top: 50px;
+
+    ">send</button>
+
+
+<div style="height: 1000px; background-color: red;">5</div> -->
+    <div class="container" style="background-color: blanchedalmond; width: 1000px; height: 1000px;">Parent
+            <div style="background-color: blueviolet; width: 500px; height: 500px;">Child
+                <div class="child" style="background-color: aquamarine; width: 200px; height: 200px;">child ko child</div>
+                
+
+
+
+            </div>
+            <!-- <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div> -->
+
+    </div>
+
+
+   
+
+<script>
+    let container = document.querySelector(".container");
+    let firstChild = document.querySelector(".container div");
+    let child = document.querySelector(".child");
+    // console.log(container, child);
+
+    child.addEventListener('click',(e)=>{
+console.log("child");
+e.stopPropagation();
+    })
+
+    container.addEventListener('click',(e)=>{
+        console.log(
+            "container"
+        );
+    })
+
+    firstChild.addEventListener('click',(e)=>{
+        console.log("first child");
+    })
+
+</script>
+</body>
+</html>
