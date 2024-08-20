@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>On Mind?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Recursive:wght@300..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .container {
+        border: 8px solid rgb(218, 208, 208);
+        max-width: fit-content;
+        padding: 10px;
+        margin: 0 auto;
+      }
+
+      .content1 {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 10px;
+        border-bottom: 1px solid grey;
+      }
+
+      .contents {
+        display: flex;
+        justify-content: center;
+        align-items: cover;
+        padding: 10px;
+        gap: 10px;
+      }
+
+      .contents .type {
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #photo {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+      }
+
+      .jersey-25-regular {
+        font-family: "Jersey 25", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      #inputtext {
+        border-radius: 9px;
+        color: black;
+        font-family: Recursive, Arial, Helvetica, sans-serif;
+        border: 1px solid rgb(218, 208, 208);
+        background-color: rgb(218, 208, 208);
+        padding: 3px;
+        font-size: 16px;
+        height: 18px;
+        width: 100%;
+      }
+
+      #photo i {
+        color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content1">
+        <div>
+          <img id="photo" src="./bw.jpg" />
+        </div>
+        <div id="input">
+          <input
+            id="inputtext"
+            type="text"
+            placeholder="What's on your Mind?"
+          />
+        </div>
+      </div>
+
+      <div class="contents">
+
+        <div class="type" id="live">
+          <i class="fa-solid fa-video"></i>
+          <div>Live Photos</div>
+        </div>
+
+        
+        <div class="type" id="live">
+          <i class="fa-regular fa-images"></i>
+          <div>Live Photos</div>
+        </div>
+
+       
+        <div class="type" id="live">
+          <i class="fa-solid fa-film"></i>
+          <div>Live Photos</div>
+        </div>
+
+      
+    </div>
+
+  </body>
+</html>
+
+<!-- to format code: shift + alt + F -->
+<!-- to switch tabs alt+tab -->

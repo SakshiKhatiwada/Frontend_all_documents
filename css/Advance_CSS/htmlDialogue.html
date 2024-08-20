@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML dialogue box</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+        body {
+            background-color: #2E495E;
+        }
+
+        .box {
+            position: relative;
+            /* display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(5,1fr); */
+            
+            border: 2px solid black;
+            margin: 0 auto;
+            padding: 20px;
+            margin: 30px;
+            background-color:#FE5C36 ;
+            height: 80vh;
+        width: 80vw;       }
+        
+        .innerBox{
+            position: absolute;
+            width: 30px;
+            height: auto;
+            margin: 8px;
+            /* position: absolute; */
+
+            padding: 15px;
+            /* margin: auto auto; */
+            border: 2px solid rgb(3, 3, 3);
+             
+        }
+
+        .box1{
+            background-color: rgb(151, 215, 151);
+          top: 20vh;
+          left: 30px;
+
+
+        }
+
+        .box2{ 
+            
+            top: 5vh;
+            left: 35vw;
+            background-color: rgb(69, 69, 183);}
+        .box3{
+            
+            
+            top: 20vh; right: 30px; 
+            background-color: rgb(183, 175, 69);}
+        .box4{ 
+            top: 47vh;
+            right: 10px; 
+            background-color: rgb(183, 69, 139);}
+        .box5{
+            bottom: 10px;
+            left: 45%;
+            background-color: rgb(183, 69, 69);}
+
+        .box6{
+            top: 47vh;
+            left: 10px;
+            background-color: rgb(255, 255, 255);}
+
+
+            .text{
+                position: absolute;
+                top: 35vh;
+                left: 35%;
+                font-size: 40px;
+                font-weight: 1000;
+            }
+
+            .close{
+                position: absolute;
+                top: 15px;
+                left: 15px;
+            }
+    </style>
+</head>
+<body>
+    
+    <main>
+
+        <div class="box">
+        <div class="innerBox box1"></div>
+        <div class="innerBox box2"></div>
+        <div class="innerBox box3"></div>
+        <div class="innerBox box4"></div>
+        <div class="innerBox box5"></div>
+        <div class="innerBox box6"></div>
+            <div class="close"><i class="fa-solid fa-square-xmark"></i></div>
+        <div class="text">HTML Dialogue</div>
+    </div>
+        
+    </main>
+</body>
+</html>

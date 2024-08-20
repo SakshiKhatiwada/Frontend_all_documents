@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+
+}
+
+:root{
+    --blue: #dff9f7;
+}
+
+
+
+body{
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--blue);
+    display:flex;
+    justify-content: center;
+align-items: center;
+min-height: 100vh;
+
+}
+
+/* default margin for span */
+span{
+    margin: 0px 5px;
+}
+
+.container{
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 20px;
+background-color: #fff;
+padding: 30px;
+border-radius: 20px;
+/* width: 50vw; */
+}
+.gameName{
+    
+    border: 2px solid #36a299;
+    padding: 20px;
+    text-align: center;
+    max-width: fit-content;
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    /* clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 80%); */
+    
+    font-weight: 1000;
+}
+
+#the{
+    font-family: "Playwrite BE VLG",cursive;
+  font-optical-sizing: auto;
+  font-weight: 1000;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.msg{
+    width: 90%;
+    margin: 30px;
+
+    span{
+        font-weight: 900;
+        color: rgb(242, 165, 22);
+    }
+}
+
+.guessedLetters{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.guessed{
+    font-size: 30px;
+    font-weight: 400;
+    color:#3670a2;
+    text-transform: uppercase;
+}
+
+
+.guessed::after{
+content: "\25cf";
+font-size: 30px;
+color:#3670a2;
+}
+
+.updatedGuess::after{
+    content: "" !important;
+    
+}
+.inputs{
+    display:flex;
+    justify-content: center;
+    
+}
+.inputs input{
+    border: 1px solid rgb(131, 131, 191);
+    display:flex;
+    flex-direction: column;
+    width: 50px;
+    height: 50px;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.inputs input:focus{
+    /* border: 2px solid rgb(79, 79, 149); */
+    box-shadow: 3px 3px 8px rgba(38, 166, 216, 0.2);
+}
+
+.details p,.msg{
+    font-weight: 500;
+}
+    
+    
+.guess{
+    padding: 12px 30px;
+    background-color:rgb(253, 164, 0);
+    color: white;
+    border-radius: 15px;
+    outline: none;
+    border:none;
+    cursor: pointer;
+    transition: 0.1s all;
+}
+.guess:hover
+{
+    background-color:rgb(236, 162, 73);
+    transform: scale(1.02);
+}
+
+.options{
+    display: flex;
+    flex-direction: column;
+    
+    gap: 10px;
+   
+}
+
+.options .option1, .options .option2{
+    display: flex;
+    gap: 10px;
+   
+    .option{
+        /* child of option1 and option 2 */
+        border: 1px solid grey;
+        padding: 20px;
+    }
+}

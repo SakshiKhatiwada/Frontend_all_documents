@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Declaration</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        *{  box-sizing: border-box;
+            /* default "context-box" hunxa, and usle chai padding ko lagi extra space linxa bhaney border box le chai padding tei bhitra bata linxa */
+            margin: 0;
+            padding: 0;
+        }
+        :root{
+            --primary: rgb(228, 218, 218);
+            --secondary: rgb(5, 82, 5);
+        }
+
+        .para{
+            margin: 50px;
+            padding: 30px;
+            background-color: var(--primary);
+            color: var(--secondary);
+        }
+        .icon i{
+            font-size: 40px;
+        }
+        
+        .icon {
+            cursor: pointer;
+            display: inline-block;
+            /* max-width: fit-content; */
+            /* border: 2px solid red; */
+            position: relative;
+            transform: translateX(50%);
+            left: 50%;
+        }
+
+        .id {
+            position: absolute;
+            bottom: 110%;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+            border-radius: 9px;
+            left: 50%;
+            transform:translateX(-50%);
+            transition: all 0.5s;
+            opacity: 0;
+        }
+        
+        .icon:hover .id{
+            /* cursor: pointer; */
+            background-color: #ccc;
+            /* color: white; */
+            opacity: 1;
+            font-weight: bold;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="para">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro voluptates sint recusandae, a fuga fugit distinctio culpa veniam laborum ipsa dignissimos autem repellendus libero dolores laudantium ea eligendi! Nobis, consequuntur.
+    </div>
+    <div class="icon">
+        
+        <i class="fa-brands fa-facebook"></i>
+
+        <span class="id">
+            Facebook
+        </span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+body {
+    padding: 150px;
+}
+
+div {
+    margin: 20px;
+}
+
+#msg{
+    /* border: 2px solid red; */
+    /* max-width: fit-content; */
+    margin-right: 100px;
+}
+
+
+fieldset{
+    border: 2px dotted #961e4e;
+    background-color:aliceblue;
+    margin-left: 200px;
+    height: 200px;
+    font-size: 25px;
+}
+
+input{
+    font-size:20px;
+    /* background-color: #961e4e; */
+    background-color: rgb(196, 247, 255);
+    outline-color: blueviolet;
+
+}
+
+label{
+    font-size: 25px;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformation</title>
+    <style>
+        .box1{
+        
+            border: 2px solid black;
+            margin: 20px 60px;
+            padding: 100px;
+            transition: transform 2s;
+            transition: background-color 2s ease-in;
+            /* transition-timing-function: ease-in; */
+            cursor: pointer;
+        }
+
+        .box1:hover{
+            /* transform: rotate(-5deg); */
+            background-color: #961e4e;
+            /* transform: translate(40px, 40px);  */
+            /* if one transformation property is written, it overrides other tranformation properties */
+        }
+
+        /* Transition property can only be applied to the properties that has intermediate state, display property doesn't have intermediate state, so we can't apply transition property here */
+    </style>
+</head>
+
+<body>
+    <!-- Transformation Practice -->
+
+    <div class="box1">
+        This is box 1.
+    </div>
+    
+
+
+</body>
+
+</html>

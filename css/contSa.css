@@ -1,0 +1,28 @@
+body{
+   
+    padding: 40px, 50px;
+}
+
+
+h1{
+    font-size: 40px;
+}
+
+div{
+    width: 500px;
+  
+}
+
+.ip{
+    width:200px;
+    margin: 20px;
+}
+
+
+#butn{
+
+    width:200px;
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+}

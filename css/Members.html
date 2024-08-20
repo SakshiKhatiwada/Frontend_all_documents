@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members Screen</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+
+.container{
+    
+    border: 2px solid black;
+    width: 30vw;
+    height:30vw;
+    padding: 20px;
+    margin: 0 auto;
+}
+.header,.add,.search{
+    margin-bottom: 25px;;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.add, .search {
+    justify-content: left;
+    gap: 10px;
+}
+
+.pic {
+    border-radius: 50%;
+}
+.add{
+    width: fit-content;
+    height: auto;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid skyblue;
+    background-color: rgb(202, 235, 248);
+    color: blue;
+    font-weight: bold;
+}
+
+.search {
+    border: 1px solid rgb(235, 232, 232);
+    padding: 5px;
+}
+
+input {
+    border: none;
+}
+input:focus{
+    outline: none;
+}
+.people1, .people1~div {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+#contributorsBox{
+    border: 1px solid grey;
+    padding: 9px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.images, .microphones, .names{
+    display: flex;
+    flex-direction: column;
+   gap: 8px;
+   line-height: 15px;
+}
+.names {
+    margin-top: 5px;
+    font-size: 18px;
+}
+.cover{
+    display: flex;
+    flex-direction: column;
+    /* column-gap: 30px; */
+    
+}
+.line{
+    position: relative;
+    padding: 2px;
+    display: flex;
+    flex-direction:row ;
+    gap: 40px;
+    /* justify-content: space-between; */
+
+}
+
+
+.names{
+    gap: 1px;
+}
+.microphone{
+    position: absolute;
+    right: 2px;
+    gap: 5px;
+
+}
+    </style>
+</head>
+<body>
+    <main class="container">
+
+        <div class="header">
+            <div>People</div>
+            <div><i class="fa-solid fa-square-xmark"></i></div>
+        </div>
+
+        <div class="add">
+            <div><i class="fa-solid fa-user-plus"></i></div>
+            <div class="addpeople">Add People</div>
+        </div>
+        <div class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" class="searchPeople" placeholder="Search for People">
+        </div>
+        <div id="contributorsBox">
+
+            <div id="contributors">Contributors</div>
+            <i class="fa-regular fa-v"></i>
+        </div>
+            
+        <div class="cover">
+        <div class="people">
+            <div class="line">
+                <div class="images">
+                    <img class="pic" src="../pink flower.jpg" height="25px" width="25px">
+
+                </div>
+
+                <div class="names">
+                    Bibek Joshi (You)
+                    <!-- <br>
+                    You are the host -->
+                </div>
+
+                <div class="microphone">
+                    <i class="fa-solid fa-microphone"></i>
+                    &nbsp;
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </div>
+        </div>
+
+
+            
+            <div class="people">
+            <div class="line">
+                <div class="images">
+                    <img class="pic" src="../pink flower.jpg" height="25px" width="25px">
+                </div>
+                
+                <div class="names">
+                    Bibek Joshi (Presentation) 
+                </div>
+
+                <div class="microphone">
+                    <i class="fa-solid fa-microphone"></i>
+                    &nbsp;
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="people">
+            <div class="line">
+                <div class="images">
+                    <img class="pic" src="../pink flower.jpg" height="25px" width="25px">
+                    
+                </div>
+                
+                <div class="names">
+                    Sakshi Khatiwada
+                </div>
+                
+                <div class="microphone">
+                    <i class="fa-solid fa-microphone"></i>
+                    &nbsp;
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="people">
+            <div class="line">
+                <div class="images">
+                    <img class="pic" src="../pink flower.jpg" height="25px" width="25px">
+                </div>
+                
+                <div class="names">
+                    Yojana Pandey
+                </div>
+                
+                <div class="microphone">
+                    <i class="fa-solid fa-microphone"></i>
+                    &nbsp;
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+    </main>
+</body>
+</html>

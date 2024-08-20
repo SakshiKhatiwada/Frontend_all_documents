@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-image: url(./building2.jpg);
+           background-size: cover; 
+        
+        }
+
+        .logo{
+            color: white;
+            font-size: 45px;
+        }
+        #T{
+            color: orange;
+        }
+       
+        
+        .container{
+            padding-right: 10px;
+            color: #ffff;
+            /* -webkit-text-stroke: #000000; */
+            /* text-shadow: 2px; */
+            font-size:20px;
+            font-weight: bold;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+            display: flex;
+            justify-content: right;
+            gap: 25px;
+        }
+        
+       .container2{
+           margin: 350px auto;
+        /* border: 1px solid black; */
+        max-width: fit-content;
+        display: flex;
+        flex-direction: column;
+         justify-content: center;
+        align-items: center; 
+    } 
+        
+        .contentText{
+          font-size: 40px;
+          margin-bottom: 10px;
+        }
+
+        #tinker{
+            color: red;
+        }
+        #html{
+            color:blue;
+        }
+        a{
+            text-decoration: none;
+        }
+        #template,p,a{
+            color: white;
+        }
+        button{
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 15px;
+            border-color: #ffff;
+            text-transform: capitalize;
+            background-color: white;
+            font-size: large;
+        
+        }
+
+        button:hover {
+            background-color: black;
+            color: white;
+            transition: all 1s;
+        }
+    </style>
+
+
+</head>
+<body>
+    
+    <header id="header">
+    <div class="container">
+
+            <nav>Home</nav>
+            <nav>About Us</nav>
+            <nav>Portfolio</nav>
+            <nav>Contact us</nav>
+        </div>
+      
+        <div class="logo" >
+            <span id="T">T</span>INKER
+        </div>
+        
+
+        <div class="container2">
+            <div class="contentText"><span id="tinker">TINKER</span><span ID="html">HTML5</span><span id="template">TEMPLATE</span>
+            </div>
+            <div class="content1">
+
+                <p class="content1">Tinker is free HTML CSS from &nbsp;<a href="https://templatemo.com/" target="_blank"> templatemo.com </a>&nbsp;that can be used for any kind of website. Please tell your friend about us. Thank you </p>
+            </div>
+                
+                <button class="content1" type="button">Let's Start</button>
+            </div>
+    </header>
+    </body>
+</html>

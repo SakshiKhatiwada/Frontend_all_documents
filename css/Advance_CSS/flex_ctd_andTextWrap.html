@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Wrap & Flex Continued</title>
+
+    <style>
+        .para1{
+            border: 1px solid blue;
+            /* width: 70px; */
+            /* height: 70px; */
+            /* word-wrap: break-word; */
+
+            background-color: azure;
+
+            /* all three should be given to show ellipsis i.e. text-overflow property, it needs two other property */
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow:hidden;
+
+            /* writing-mode: vertical-rl; */
+        }
+
+        .container{
+            border: 2px solid crimson;
+            height: 500px;
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            /* align-items: stretch; */
+        align-items: flex-start;
+        }
+
+        .second{
+            flex-grow: 2;
+            margin: 20px;
+        }
+
+        .first{
+            flex-grow: 1;
+            writing-mode: vertical-lr;
+            align-self: stretch;
+            /* word-wrap: break-word; */
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+
+        <div class="para1 first">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis itaque laudantium dolores? Rerum esse numquam cupiditatedignissimos amet nesciunt distinctio? Porro qui eveniet voluptas est ut temporibus aperiam cumque sapiente?</div>
+        
+    <div class="para1 second">HEHAAHAA</div>
+    <div class="para1">
+        Byeeeeeeeeeeee
+    </div>
+    
+</main>
+</body>
+</html>

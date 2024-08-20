@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+
+    <style>
+/* Simple selectors */
+*{
+    background-color: blueviolet;
+    color: white;
+    font-size: 22px;
+}
+
+    .container{
+        padding: 5px;
+        border: 15px solid black;
+    }
+
+    #para{
+        background-color: brown;
+    }
+
+    p{
+        background-color: palevioletred;
+    }
+
+    /* Combinators Selectors */
+        /* Grouping Selectors */
+    h1,h3{
+        background-color: blanchedalmond;
+        color: blue;
+    }
+         /* Descendent selectors  */
+
+         .container .con1 {
+            border: 10px solid pink;
+            padding: 7px;
+         }
+
+        /* child selector */
+
+        div>p {
+            border: 2px solid purple;
+            /* div has no child p, so not visible */
+        }
+        div p {
+            /* all the p inside div tag */
+            border: 2px solid grey;
+        }
+
+        /* next sibling selector */
+        h1+h3 {
+            background-color: purple;
+            /* color: white; */
+        }
+        h1~h3 {
+            background-color:aliceblue;
+        }
+
+        #button{
+            background-color: brown;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+        /* Pseudo Class selectors */
+        #button:hover{
+            background-color: transparent;
+        }
+    /* a:link {
+        background-color: grey;
+    } */
+    a:visited {
+        background-color: rgb(128, 0, 0);
+    }
+    a:link {
+        background-color: rgb(31, 218, 218);
+    }
+
+    /* Pseudo element selector */
+    p::first-letter{
+        font-size:40px;
+    }
+
+    h1::before {
+        content: "Hello Uncle Namaste";
+        color: rgb(9, 220, 220);
+        
+    }
+     li::marker{
+        content: "*";
+        color: magenta;
+     }
+    h1::after {
+        content: "hehe";
+        color: rgb(0, 0, 0);
+    }
+
+    #file::file-selector-button{
+        background-color: #961e4e;
+    }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <section class="con1">
+            <p id="para">Hi, this is Sakshi</p>
+
+            <p>Hi, this is Sakshi Khatiwada</p>
+           
+            <h1>Hello...Sakshi who?</h1>
+            <h3> Oh! We met on that place before. Remember?</h3>
+            <h3> Oh! We met on that place before. Remember?IIIIIIIIIIIsn't it?</h3>
+
+            <p>Yeah I remembered now.</p>
+        </section>
+
+        <section class="con2">
+            <!-- Pseudo Class Selector -->
+            <button id="button">Clickbait</button>
+            <a href="../pink flower.jpg">flower for you</a>
+        </section>
+
+        <ul>
+
+            <li>
+            Apple    
+            </li>
+            <li>
+                Banana
+            </li>
+        </ul>
+
+        <input id="file" type="file">
+    </div>
+</body>
+</html>
