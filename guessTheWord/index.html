@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Word!</title>
+
+    <!-- font1 link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&display=swap" rel="stylesheet">
+
+    <!-- font2 link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- linking css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <!-- game name -->
+            <heading class="gameName">Guess <span id="the">the</span> Word </heading>
+
+            <!-- guessed or not? -->
+            <div class="msg">Game is about to start. Click <span>Guess!</span></div>
+
+        <section class="guessedLetters">
+            Guessed letters will be shown here:
+        </section>
+
+        <!-- <div class="options">
+           
+           <div class="option1">
+            <div class="option"></div>
+            <div class="option"></div>
+            <div class="option"></div>
+            <div class="option"></div>
+            <div class="option"></div>
+           </div> 
+           
+           <div class="option2">
+            <div class="option"></div>
+            <div class="option"></div>
+            <div class="option"></div>
+            <div class="option"></div>
+            <div class="option"></div>
+           </div>
+        </div> -->
+
+        <p class="guess-left">You have<span> ? </span> guesses left.</p>
+
+        <div class="option-letters"></div>
+
+            <p>Type one letter:</p>
+        <!-- inputs -->
+        <div class="inputs">
+            <input type="text" class="letter" maxlength="1" >
+        </div>
+
+            <!-- hints -->
+             <div class="details">
+                <p class="hint">Hint: <span></span></p>
+                <p class="wrong-letters">Wrong letters: <span></span></p>
+             </div>
+
+
+             <button class="guess">Guess!</button>
+
+
+    </main>
+
+
+    <!-- linking js file -->
+     <!-- to use the variable of one js file,ORDER MATTERS! 🫠 -->
+     <script src="js/words.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
