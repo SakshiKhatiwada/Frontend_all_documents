@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- favicon icon -->
+    <link rel="icon" size="16*16" href="favicon.jpg">
+    <!-- css file -->
+    <link rel="stylesheet" href="countries.css">
+</head>
+<body>
+    <!-- body header -->
+    <header>
+        <h1>Where in the world?</h1>
+        <div>
+            <i class="fa-regular fa-moon" style="font-size: large;"></i>
+            <p style="font-size: 14px;">Dark mode</p>
+        </div>
+    </header>
+    <!-- body container -->
+    <div class="container">
+
+        <!-- search -->
+        <div class="search-container">
+            <i class="fa-magnifying-glass fa-solid"></i>
+            <input type="search" class="search" placeholder="Search for a country...">
+        </div>
+
+        <!-- filter region -->
+        <div class="filter">
+           <select>
+                <option value=" " disabled hidden selected> Filter by Region</option>
+               <option value="Africa">Africa</option>
+               <option value="America">America</option>
+               <option value="Asia">Asia</option>
+               <option value="Europe">Europe</option>
+               <option value="Oceania">Oceania</option>
+           </select>
+        </div>
+    </div>
+
+        <!-- all countries -->
+
+        <div class="country-container">
+
+        </div>
+
+    <!-- pagination -->
+        <!-- <div class="pagination">
+            <button class="prev btn"><i class="fa-chevron-left fa-solid"></i> Prev</button>
+        <ul class="pages">
+        </ul>
+        <button class="next btn">Next <i class="fa-chevron-right fa-solid"></i></button>
+        </div> -->
+
+    <script src="countries.js"> </script>
+    <!-- <script src="rough-js.js"></script> -->
+</body>
+</html>
