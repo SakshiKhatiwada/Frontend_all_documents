@@ -4,6 +4,7 @@
         margin: 0px;
         padding: 0px;
         font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',Verdana, sans-serif;
+        transition: all 0.1s ease-in-out;
     }
 
     :root{
@@ -35,6 +36,14 @@ header{
         gap: 5px;
     }
 
+    .fa-moon{
+        cursor: pointer;
+    }
+
+ 
+
+
+
     /* container */
     .container{
         margin: 3rem;
@@ -45,11 +54,11 @@ header{
     /* search */
 
     input{
-        border: none;
+        border: none !important;
         outline: none;
         margin-left: 20px;
         width: 350px;
-        
+        box-shadow: none !important;
     }
     .search-container{
         padding: 15px 5px 15px 15px;
@@ -67,12 +76,13 @@ header{
         align-items: center;
         gap: 15px;
         box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
         border:none;
+        border-radius: 10px;
         outline: none;
     }
     
     select {
+        /* border-radius: 10px; */
         padding: 15px;
         border:none;
         outline: none;
@@ -87,44 +97,53 @@ header{
         width: 100%;
         display: grid;
         grid-template-columns: repeat(4,1fr);
+      
+
+        /* @media (max-width:440px){
+            grid-template-columns: repeat(2,1fr);
+            margin: 10px;
+        } */
     }
    .country{
-  /* max-width: fit-content; */
-  box-shadow:0 0 2px 2px rgba(137, 131, 131, 0.2);
-  margin: 30px;
-  border-radius: 4px;
-   }
+    
+    border: 2px solid rgba(0, 0, 0, 0.1); 
+     box-shadow:0 0 2px 2px rgba(137, 131, 131, 0.2);
+    margin: 30px;
+    border-radius: 4px;
+    max-height: fit-content;
+    width: 1fr;
+
+    display: flex;
+    flex-direction: column;
+    
+}
 
    .country img{
     width:100%;
-    height: 50%;
+    height: 60%;
     border-radius: 4px;
     box-shadow: 0px -1px 2px 3px rgba(0, 0, 0, 0.1);
 
+  
 
-   }
 
-   .info{
-    /* border: 2px solid red; */
-    font-size: 16px;
-    margin-top: 70px;
-   margin-left: 25px;
-   
    }
 
    .info h3{
     font-size: 20px;
     font-weight: 700;
-    margin: 10px 0px;
    }
 
-   .info div{
-    margin:10px 0px;
-   }
+   .info{
+    height: auto;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 15px;
+}
    
-   .info div span{
-    font-weight: 500;
-   }
+
 
 
    /* Pagination */
@@ -177,4 +196,21 @@ header{
     outline:2px solid rgba(36, 83, 115, 0.4);
    }
 
-   /*  */
+
+      /* DARKMODE */
+      .dark-mode{
+        background-color: #1f1f1f;
+        color: rgb(220, 211, 211);
+    }
+
+    .dark-mode-box{
+        background-color: #201d1d;
+        color: rgb(227, 223, 223);
+        border: 1px solid white;
+        border-radius: 10px;
+        box-shadow: 0 0 2px 3px rgba(72, 100, 143, 0.3);
+    }
+
+    .dark-mode-box::placeholder{
+        color: white;
+    }

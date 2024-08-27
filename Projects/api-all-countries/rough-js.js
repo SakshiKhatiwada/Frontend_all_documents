@@ -45,3 +45,10 @@ fetch(url)
     // Handle any errors here
     console.error('There was a problem with the fetch operation:', error);
   });
+
+
+  // let val = 'hi';
+
+  // value2 = `this is ${val}`;
+  // console.log(value2);
+
