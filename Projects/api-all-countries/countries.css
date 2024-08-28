@@ -4,7 +4,7 @@
         margin: 0px;
         padding: 0px;
         font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',Verdana, sans-serif;
-        transition: all 0.1s ease-in-out;
+       
     }
 
     :root{
@@ -97,6 +97,7 @@ header{
         width: 100%;
         display: grid;
         grid-template-columns: repeat(4,1fr);
+        transition: all 0.1s ease-in-out;
       
 
         /* @media (max-width:440px){
@@ -111,8 +112,7 @@ header{
     margin: 30px;
     border-radius: 4px;
     max-height: fit-content;
-    width: 1fr;
-
+    cursor:pointer;
     display: flex;
     flex-direction: column;
     
@@ -195,6 +195,36 @@ header{
     text-shadow: 2px 2px rgb(85, 57, 57);
     outline:2px solid rgba(36, 83, 115, 0.4);
    }
+
+
+   /* Individual Country Page */
+   .backBtn{
+    padding: 8px 15px;
+    background-color: var(--btn-color);
+    border-radius: 10px;
+    /* position: fixed;
+    top: 20px;
+    left: 30px; */
+    outline: none;
+    border:none;
+    cursor: pointer;
+}
+
+.individual-country{
+    padding: 100px;
+}
+
+.individual-country img{
+    /* padding: 10px; */
+    width: 400px;
+    border-radius: 13px;
+    /* box-shadow: 0 0 2px 3px rgba(19, 23, 28, 0.87); */
+    transform: translateX(100%);
+}
+
+.individual-country .info{
+    padding: 20px;
+}
 
 
       /* DARKMODE */

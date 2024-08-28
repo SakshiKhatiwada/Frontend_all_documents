@@ -59,6 +59,7 @@ function pageView(totalPages, currentPage){
 //--------------Printing on UI
 function print(data){
     countryContainer.innerHTML=``;
+    // log('datalength: ',data.length);
     for(let i=0; i<data.length; i++)
         {
             let country = document.createElement('div');
@@ -91,13 +92,35 @@ function print(data){
         
 }}
 
+function countrySelected(){
+    log("country selected activated");
+    // clicking on the individual country for more info
+let allCountries = document.querySelectorAll(".country");
+// log(allCountries);
+
+//forEach loop
+allCountries.forEach(country=>{
+    country.addEventListener('click',event=>{
+        log(event.currentTarget);//event.target vs event.currentTarget
+        const clickedCountryElement= country.querySelector(".info h3");
+        // const countryName = clickedCountryElement.textContent;
+        // log(countryName);
+        // window.location.href='';
+        window.location.href="individual-country.html"
+        window.localStorage.setItem('country-name',clickedCountryElement.textContent);
+    })
+})
+}
+
 
 
 //fetching all the countries
 
-let response = fetch("https://restcountries.com/v3.1/all");
+// let url = fetch("https://restcountries.com/v3.1/all");
+let url = fetch("https://restcountries.com/v3.1/all?fields=name,capital,continents,population,area,region,flags");
+//filtered url
 
-response
+url
 .then((reply)=>
 {
     // console.log(reply.json());
@@ -108,6 +131,8 @@ response
 // console.log("printing data: \n");
 // console.log(data[0].name?.common,'\n', data[0].capital[0], data[0].languages?.eng, data[0].area, data[0].flag, data[0].continents[0]);
 print(data);
+countrySelected();
+
 
 })
 .catch(error=>{
@@ -131,20 +156,21 @@ search.addEventListener("input",()=>{
     if (!search.value == '')
      searchedCountry = fetch(`https://restcountries.com/v3.1/name/${search.value}`);
     else{
-        searchedCountry = response;
+        searchedCountry = url;//if input box is empty, go with the default url
     }
         searchedCountry.then(response =>{
             return response.json();
         }).then(country=>{
             // log(country);
             // log(country[0]?.name?.common);
-            print(country);
+            print(country);countrySelected();
         }).catch(error=>{
             log(error);
         })       
         
         select.value = option1.value;
         // select.value = 'default';    -> this doesn't work
+        
 })
 
 
@@ -160,12 +186,13 @@ select.addEventListener('change',()=>{
     searchedRegion.then(response=>{
         return response.json();
     }).then(countryByRegion =>{
-        print(countryByRegion);
+        print(countryByRegion);countrySelected();
     }).catch(err=>{
         log(err);
     })
 
     search.value = ``;
+    
 })
 
 
@@ -185,10 +212,12 @@ darkmode.addEventListener('click',()=>{
     heading.classList.toggle('dark-mode-box');
     search.classList.toggle('dark-mode-box');
     searchBox.classList.toggle('dark-mode-box');
-
+    
     
     options.forEach(data=>{
         // log(data.textContent);
         data.classList.toggle('dark-mode-box');
     })
 })
+
+
