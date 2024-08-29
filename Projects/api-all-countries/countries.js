@@ -4,57 +4,9 @@ let allPages = 15;
 
 // log(darkmode);
 
-let ul = document.querySelector(".pages");
-let prevBtn = document.querySelector("prev");
-let nextBtn = document.querySelector("next");
-let pagination = document.querySelector(".pagination");
 let countryContainer = document.querySelector(".country-container");
 let select = document.querySelector("select");
 let option1 = document.querySelector("select option");
-
-
-function pageView(totalPages, currentPage){
-    let before= currentPage-2;
-    let after= currentPage+2;
-    let liCurrentStatus = '';
-    pagination.innerHTML='';
-
-    ul.innerHTML='';
-   
-
-
-    pagination.innerHTML = `<button class="prev btn" onclick="pageView(${totalPages},${currentPage-1})"><i class="fa-chevron-left fa-solid"></i> Prev</button>`;
-
-
-    //for UI
-    
-    for (let pagelength=before; pagelength<= after; pagelength++)
-    {
-
-        if(pagelength<1 || pagelength>totalPages)
-            continue;
-
-
-        if(pagelength==currentPage){
-            liCurrentStatus='active';
-
-        }else{
-            liCurrentStatus='';
-        }
-
-        
-        ul.innerHTML += `<li class="page ${liCurrentStatus}">${pagelength}</li>`
-    }
-    
-    
-    pagination.innerHTML += ul.innerHTML +
-     `<button class="next btn" onclick="pageView(${totalPages},${currentPage+1})">Next <i class="fa-chevron-right fa-solid"></i>
-     </button>`;
-    // log('inner html',pagination.innerHTML);
-}
-
-// pageView(allPages,4);
-
 
 //--------------Printing on UI
 function print(data){
