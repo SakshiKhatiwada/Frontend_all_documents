@@ -14,8 +14,29 @@
         --text-color: rgb(203, 218, 211);
 
     }
+   /* scrollbar */
+   body::-webkit-scrollbar{
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
 
-   
+body::-webkit-scrollbar-thumb{
+    background-color:rgba(72, 100, 143, 0.7);
+    border-radius: 40%;
+    border: 1px solid rgba(51, 90, 116, 0.4);
+    cursor: pointer;
+}
+
+body::-webkit-scrollbar-thumb:hover{
+    background-color: rgba(72, 100, 143, 0.87);
+}
+
+/* body::-webkit-scrollbar-button{
+    background-color: #ccc;
+    color: black;
+    
+} */
+      
 /*header */
 header{
     margin: 10px 0px;
