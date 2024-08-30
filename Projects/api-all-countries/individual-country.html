@@ -57,7 +57,7 @@ print(data);
 function print(data){
     let {flags,name,currencies,} = data[0];
     let currencyKey = Object.keys(currencies)[0];
-    log(currencyKey);
+    // log(currencyKey);
     //currency key is different for different countries
 
            individualCountry.innerHTML=`<img src=${data[0]?.flags?.png} alt="${data[0]?.flags?.alt}">
@@ -102,9 +102,13 @@ let darkmode = document.querySelector(".fa-moon");
 let heading = document.querySelector("header");
 
 darkmode.addEventListener('click',()=>{
-    document.body.classList.toggle('dark-mode');
-    heading.classList.toggle('dark-mode-box');
+  
 })
+
+if(window.localStorage.getItem('dark-mode') == 'dark-mode'){
+    document.body.classList.add('dark-mode');
+    heading.classList.add('dark-mode-box');
+}
 
 
 function goBack(){

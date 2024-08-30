@@ -45,7 +45,7 @@ function print(data){
 }}
 
 function countrySelected(){
-    log("country selected activated");
+    // log("country selected activated");
     // clicking on the individual country for more info
 let allCountries = document.querySelectorAll(".country");
 // log(allCountries);
@@ -53,7 +53,7 @@ let allCountries = document.querySelectorAll(".country");
 //forEach loop
 allCountries.forEach(country=>{
     country.addEventListener('click',event=>{
-        log(event.currentTarget);//event.target vs event.currentTarget
+        // log(event.currentTarget);//event.target vs event.currentTarget
         const clickedCountryElement= country.querySelector(".info h3");
         // const countryName = clickedCountryElement.textContent;
         // log(countryName);
@@ -170,6 +170,27 @@ darkmode.addEventListener('click',()=>{
         // log(data.textContent);
         data.classList.toggle('dark-mode-box');
     })
+
+    log(`did I reach upto here?`);
+    if(document.body.classList.contains('dark-mode')){
+        log(`is this working?`);
+        window.localStorage.setItem('dark-mode','dark-mode');
+        window.localStorage.setItem('dark-mode-box','dark-mode-box');
+    }
+    else{
+        window.localStorage.setItem('dark-mode','');
+        window.localStorage.setItem('dark-mode-box','');
+    }
 })
 
+//not inside any function
+//for persistent darkmode even after exploring pages inside pages
+if(window.localStorage.getItem('dark-mode') == 'dark-mode'){
+    document.body.classList.add('dark-mode');
+    select.classList.add('dark-mode-box');
+    selectBox.classList.add('dark-mode-box');
+    heading.classList.add('dark-mode-box');
+    search.classList.add('dark-mode-box');
+    searchBox.classList.add('dark-mode-box');
+}
 
