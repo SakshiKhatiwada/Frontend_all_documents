@@ -19,7 +19,6 @@ function OTPGenerator(length = 4)//default length of OTP is 4
     {
         otpObj[otp] = 1;
         log(otp);
-        window.localStorage.setItem("otp",otpObj);
         // log(otpObj);
         return otp;
     }
@@ -28,5 +27,6 @@ function OTPGenerator(length = 4)//default length of OTP is 4
         log(`The number of times this OTP ${otp} has been generated: ${otpObj[otp]}`);
         OTPGenerator();
     }
+    window.localStorage.setItem("otp",otpObj);
 }
 
