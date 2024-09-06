@@ -1,6 +1,6 @@
 //to generate OTP and regenerate it if it is same with the previous ones
 let log = console.log;
-let checkingObj= {};
+let otpObj= {};
 
 
 function OTPGenerator(length = 4)//default length of OTP is 4
@@ -15,15 +15,17 @@ function OTPGenerator(length = 4)//default length of OTP is 4
 
     //checking if it is same as previous or not
 
-    if (checkingObj[otp] == undefined)
+    if (otpObj[otp] == undefined)
     {
-        checkingObj[otp] = 1;
+        otpObj[otp] = 1;
         log(otp);
+        window.localStorage.setItem("otp",otpObj);
+        // log(otpObj);
         return otp;
     }
     else{
-        checkingObj[otp] ++;
-        log(`The number of times this OTP ${otp} has been generated: ${checkingObj[otp]}`);
+        otpObj[otp] ++;
+        log(`The number of times this OTP ${otp} has been generated: ${otpObj[otp]}`);
         OTPGenerator();
     }
 }
