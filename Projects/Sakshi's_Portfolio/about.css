@@ -244,12 +244,6 @@ body section {
   }
 }
 
-/* for dark mode */
-.dark {
-  background-color: black !important;
-  color: white !important;
-}
-
 /* Contact Me page: */
 
 .headContainer {
@@ -573,13 +567,20 @@ textarea:focus {
   justify-content: space-between;
 }
 
-.progressbar {
-  height: 100%;
-  border-radius: 9px;
-  background-color: var(--progressBar);
-  /* border: 1px solid var(--grey); */
+progress{
+  height: 10px;
+  width: 100%;
+  border-radius: 15px;
+  border: 1px solid black;
 }
 
+progress::-webkit-progress-bar{
+  background-color: var(--progressBar);
+}
+
+progress::-webkit-progress-value{
+  background-color: var(--lightPurple);
+}
 .Bar {
   margin-top: 8px;
   padding: 0px;

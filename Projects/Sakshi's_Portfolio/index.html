@@ -31,9 +31,7 @@
                     <a href="#services" class="services menus text">Services</a>
                     <a href="#portfolio" class="portfolio menus text">Portfolio</a>
                     <a href="#contactMe" class="contactMe menus text">ContactMe</a>
-                    <a href="#" class="crescentIcon">
                         <i class="darkmodebtn fa-regular fa-moon"  onclick="darkmode()"></i>
-                    </a>
                 </nav>
             </div>
         
@@ -145,18 +143,22 @@
             </section>
         </div>
 
-        <div class="block">
+        <!--*** old way I did as a beginner *** -->
+        <!-- <div class="block">
             <div class="data"><p>Figma</p><p>20%</p></div>
             <div class="Bar" style="width: 100%;">
                 <div class="progressbar" style="width: 20%;"></div>
             </div>
-        </div>
+        </div> -->
 
+       <div class="block">
+        <div class="data"><p>Figma</p><p>20%</p></div>
+        <progress max="100" value="20">Figma</progress>
+       </div>
 
   <div class="block">
             <div class="data"><p>Canva</p><p>40%</p></div>
-            <div class="Bar" style="width:100%;"><div class="progressbar" style="width: 40%;"></div>
-            </div>
+            <progress max="100" value="40">Canva</progress>
         </div>
     
         
@@ -188,22 +190,19 @@
 
             <div class="block">
                 <div class="data"><p>HTML</p><p>80%</p></div>
-                <div class="Bar" style="width:100%;"><div class="progressbar" style="width: 80%;"></div>
-                </div>
+                <progress max="100" value="80">HTML</progress>
             </div>
         
                 
             <div class="block">
                 <div class="data"><p>CSS</p><p>60%</p></div>
-                <div class="Bar" style="width:100%;"><div class="progressbar" style="width: 60%;"></div>
-                </div>
+                <progress max="100" value="60">CSS</progress>
             </div>
         
 
             <div class="block">
                 <div class="data"><p>JS</p><p>40%</p></div>
-                <div class="Bar" style="width:100%;"><div class="progressbar" style="width: 40%;"></div>
-                </div>
+                <progress max="100" value="50">JS</progress>
             </div>
         
                
@@ -212,7 +211,6 @@
                  </section>
 
                  <hr>
-
 
        <!-- Contact Me: -->
        <section id="contactMe">
