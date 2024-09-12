@@ -1,3 +1,4 @@
+const log = console.log;
 // "use strict";
 // let input = document.querySelector("input");
 // let log = console.log;
@@ -14,3 +15,7 @@
 
 Name = "sakshi";
 console.log(Name);
+
+const date = new Date();
+log(date.getFullYear());
+log(date.getDay());
