@@ -13,9 +13,9 @@ const log = console.log;
 //     log(alarmTimeExtracted);
 // })
 
-Name = "sakshi";
-console.log(Name);
+// Name = "sakshi";
+// console.log(Name);
 
-const date = new Date();
-log(date.getFullYear());
-log(date.getDay());
+// const date = new Date();
+// log(date.getFullYear());
+// log(date.getDay());

@@ -60,7 +60,7 @@ function print(data){
     // log(currencyKey);
     //currency key is different for different countries
 
-           individualCountry.innerHTML=`<img src=${data[0]?.flags?.png} alt="${data[0]?.flags?.alt}">
+           individualCountry.innerHTML=`<img src=${data[0]?.flags?.png} alt="${data[0]?.flags?.alt}" class='flagImg'>
             <div class="info"><hr>
             <h3>${data[0]?.name?.common}</h3><hr>
             <div>
@@ -102,7 +102,8 @@ let darkmode = document.querySelector(".fa-moon");
 let heading = document.querySelector("header");
 
 darkmode.addEventListener('click',()=>{
-  
+    heading.classList.toggle('dark-mode-box');
+    document.body.classList.toggle('dark-mode');
 })
 
 if(window.localStorage.getItem('dark-mode') == 'dark-mode'){
@@ -113,6 +114,12 @@ if(window.localStorage.getItem('dark-mode') == 'dark-mode'){
 
 function goBack(){
     window.location.href = "countries.html";
+}
+
+if(window.localStorage.getItem('dark-mode') == 'dark-mode'){
+    heading.classList.add('dark-mode-box');
+    document.body.classList.add('dark-mode');
+
 }
      </script>
 </body>
