@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+
+    <style>
+        canvas{
+        margin: 50px;
+    }
+    </style>
+</head>
+<body>
+    <img src="https://plus.unsplash.com/premium_photo-1676475964992-6404b8db0b53?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="bouquet" hidden>
+    <canvas id="canvas" width="300" height="300">
+        <!-- doesn't have its own drawing ability, uses js -->
+    </canvas>
+
+    <script>
+        const canvas=document.querySelector("#canvas");
+        const context = canvas.getContext("2d");
+        const img = document.querySelector("img");
+        // context.beginPath();
+
+        // context.moveTo(20,20);
+        // context.lineTo(20,100);
+        // context.lineTo(100,400);
+        // context.fillStyle = 'red';
+        // context.fillRect(20,20,100,200);
+        // // x,y,width,height
+
+        // context.stroke();
+
+//images on canvas
+context.drawImage(img,30,80,300,300);
+
+    </script>
+</body>
+</html>
