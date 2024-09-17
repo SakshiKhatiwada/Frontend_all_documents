@@ -26,3 +26,13 @@ let obj2= {
 }
 
 console.log(JSON.stringify(obj2));//{"Name":"Sakshi","Age":19}
+
+let log = console.log;
+
+let text = '{"employees":[' +
+'{"firstName":"John","lastName":"Doe" },' +
+'{"firstName":"Anna","lastName":"Smith" },' +
+'{"firstName":"Peter","lastName":"Jones" }]}';
+
+log(typeof text); //string
+log (typeof JSON.parse(text)); //js object
