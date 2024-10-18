@@ -1,0 +1,60 @@
+.box {
+    height: 200px;
+    width: 200px;
+    margin: 200px auto;
+    background: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 40px 50px; */
+
+    /* NOTE Animation Properties */
+    animation-name: spin;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    animation-delay: 0.2s; 
+    /* how long it should wait before starting animation */
+    animation-iteration-count: 1;
+    /* can also set to 1,2, 3, 40, infinite */
+    /* how many times the animation should play */
+
+    animation-direction: normal;
+    /* animation-direction: alternate-reverse; */
+
+    animation-fill-mode: forwards;
+    /* determines how a CSS animation affects the element after the animation has completed, tells the browser to stay at the last state after finishing */
+    /* animation-fill-mode: backwards; */
+    /* --> applies the starting styles of the animation before it officially starts, during any delay */
+    animation-play-state: running;
+    /* lets the user interact with the animation */
+
+    /* NOTE shorthand property */
+    /* animation: 3s spin ease 1s infinite alternate; -> Remember the order though! */
+}
+
+.box:hover{
+    animation-play-state: paused;
+}
+
+@keyframes spin {
+    0%{
+    }
+    25%{
+        background-color: pink;
+        transform: rotate(0);
+        border-radius: 0;
+    }
+    50%{
+        scale: 2;
+    }
+    75%{
+        background-color: purple;
+        color: white;
+        box-shadow: 0 0 3px 4px rgb(0, 9, 128);
+    }
+    100%{
+        border-radius: 50%;
+        transform: rotate(360deg);
+    }
+    
+}
