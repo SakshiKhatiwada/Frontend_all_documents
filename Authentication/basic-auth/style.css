@@ -1,0 +1,27 @@
+.login-form{
+    border: 2px solid slate;
+    background-color: slategray;
+    max-width: fit-content;
+    min-height: 300px;
+    padding: 30px;
+    margin: 100px;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+input,button{
+    padding: 10px 15px;
+    border-radius: 10px;
+    border:none;
+}
+
+button{
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
