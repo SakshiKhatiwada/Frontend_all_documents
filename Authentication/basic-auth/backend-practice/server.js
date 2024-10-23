@@ -1,17 +1,16 @@
-// Took help from ChatGPT because I have no idea about backend!
+//1) Setting Up Express
+const express = require('express'); // Importing express framework by requiring it
+const app = express(); // Create an instance of express -> handles all incoming requests to our server
 
-const express = require('express'); // Import express
-const app = express(); // Create an instance of express
+const cors = require('cors'); //->imports the CORS middleware to this project
+app.use(cors());//-> enables CORS for all routes in our express app
 
-const cors = require('cors');
-app.use(cors({
-  origin: 'http://127.0.0.1:5500', // Allow requests from your frontend
-  methods: 'GET, POST, PUT, DELETE, OPTIONS', // Allow the HTTP methods you need
-  allowedHeaders: 'Authorization, Content-Type',
-}));
-app.options('*', cors()); // Preflight for all routes
 
-// Middleware to handle Basic Authentication
+//3) Setting up a Sample User Database
+const users = {
+  admin: {password: '1234'}
+}
+// 4) Middleware to handle Basic Authentication
 app.use((req, res, next) => {
   const authHeader = req.headers['authorization'];
 
@@ -26,7 +25,7 @@ app.use((req, res, next) => {
   const [username, password] = credentials.split(':');
 
   // Check if credentials are correct
-  if (username === 'admin' && password === '1234') {
+  if (users[username]&& users[username].password === password) {
     next();
   } else {
     res.status(401).send('Invalid credentials');
@@ -38,6 +37,10 @@ app.get('/login', (req, res) => {
   res.send('Login successful!');
 });
 
+//Define Protected route
+// app.get('/protected', basicAuth,(req,res)=>{
+//   res.send('This is protected route.');
+// })
 // Start the server on port 3000
 app.listen(3000, () => {
   console.log('Server is running on http://localhost:3000');
