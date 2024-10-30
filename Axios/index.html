@@ -14,23 +14,50 @@
             align-items: center;
         }
 
-        .element {
+        .element,.user {
             max-width: fit-content;
             width: 300px;
             height: 350px;
             min-height: fit-content;
-            background-color: antiquewhite;
+            background-color: rgb(215, 222, 250);
             padding: 10px;
             border-radius: 10px;
             margin: 10px;
+            cursor: pointer;
 
         }
+        .user{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 18px;
+        }
 
+        .errormsg{
+            /* width: 300px;
+            height: 350px; */
+            padding: 30px 45px;
+            border-radius: 20px;
+            background-color: rgb(33, 56, 149);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+            margin: 150px;
+        }
+
+        .back{
+            background-color: green;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+        }
        
     </style>
 </head>
 <body>
-    <main>
+    <main class="main">
         <!-- added using js
         
         <div class="element">
@@ -44,6 +71,6 @@
     <!-- using Axios via CDN -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- <script src="script.js"></script> -->
-    <script src="./Interceptors/useInterceptor/service.js"></script>
+    <script type="module" src="./service.js"></script>
 </body>
 </html>
