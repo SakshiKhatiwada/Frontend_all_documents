@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+form.personal-info {
+  max-width: fit-content;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+legend {
+  font-weight: 800;
+}
+.personal-info fieldset {
+  border-radius: 10px;
+  border: 2px solid slategray;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  box-shadow: -2px -2px 8px 5px rgba(255, 255, 255, 0.692), 2px 2px 8px 5px rgba(0, 0, 0, 0.533);
+}
+
+fieldset > div:not(.buttons) {
+  width: 100%;
+  background-color: rgba(128, 128, 128, 0.256);
+  padding: 15px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.gender, .gender div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+
+fieldset > div > input {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: transparent;
+  outline: none;
+}
+input:focus {
+  border: 1px solid grey;
+  outline: none;
+}
+textarea {
+  width: 100%;
+  height: 50px;
+  resize: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+button[type="submit"],
+button[type="reset"] {
+  padding: 8px 10px;
+  outline: none;
+  border: green;
+  border-radius: 8px;
+  color: black;
+  background-color: rgb(55, 203, 55);
+  box-shadow: -2px -2px 3px 3px rgb(52, 54, 52) inset,
+    2px 2px 3px 3px rgb(243, 255, 243) inset;
+  cursor: pointer;
+}
+
+button[type="reset"] {
+  border: red;
+  background-color: rgb(205, 107, 107);
+  box-shadow: -2px -2px 3px 3px rgb(52, 54, 52) inset,
+    2px 2px 3px 3px rgb(243, 255, 243) inset;
+}

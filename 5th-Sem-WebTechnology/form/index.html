@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form class="personal-info">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <div>
+          <label for="name">Enter Name:</label>
+          <input id="name" type="text" required />
+        </div>
+        <div>
+          <label for="email">Enter Email ID:</label>
+          <input id="email" type="email" required />
+        </div>
+        <div>
+          <label for="age">Enter your DOB:</label>
+          <input id="age" type="date" required />
+        </div>
+        <div>
+          <label for="address">Enter address:</label>
+          <input id="address" type="text" required />
+        </div>
+        <div>
+          Choose your gender:
+          <div class="gender">
+           <div>
+            <label for="gender">Male</label>
+            <input id="gender" type="radio" name="gender" required />
+           </div>
+           <div>
+            <label for="gender">Female</label>
+            <input id="gender" type="radio" name="gender" required />
+           </div>
+          </div>
+        </div>
+        <textarea
+          id="message"
+          placeholder="Leave your message here for more query...📩"
+        ></textarea>
+        <div class="buttons">
+          <button type="reset">Reset</button>
+          <button type="submit">Submit</button>
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>
