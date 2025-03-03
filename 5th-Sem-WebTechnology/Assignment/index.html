@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 1</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../form/style.css" />
+  </head>
+  <body>
+    <main class="container">
+
+        <nav class="navigation-options">
+            <a href="#form">Form Section</a>
+            <a href="#images">Images Section</a>
+            <a href="#videos">Videos Section</a>
+        </nav>
+
+        <!-- image section -->
+         <h1>Image Section</h1>
+        <section id="images">
+            <img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg" width="250px" alt="peacock feather">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJxo2NFiYcR35GzCk5T3nxA7rGlSsXvIfJwg&s" alt="chameleon">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJrT7MI9fsrc6mWRBJBwhrf4vwTL7S5B8CzQ&s" alt="nature image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3e7TXmtLuPpqj-o9TJH2kTz9JOl-hBRMvOA&s" alt="starry sky">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3e7TXmtLuPpqj-o9TJH2kTz9JOl-hBRMvOA&s" alt="long path">
+        </section>
+
+        <!-- videos section -->
+        <h1>Video Section</h1>
+         <section id="videos">
+            <video src="./video1.mp4" controls></video>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/jh2LJVDtGIY?si=F84AfBb77cnQkqDl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/6BYIKEH0RCQ?si=qKYengEKJnbQG52U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/K7hU_z9X4Kk?si=0O8GcJCWhoNJn61d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+         </section>
+
+         <!-- form section -->
+          <h1>Form Section</h1>
+          <section id="form">
+            <form class="personal-info">
+                <fieldset>
+                  <legend>Personal Information</legend>
+                 
+                  <div>
+                    <label for="name">Enter Name:</label>
+                    <input id="name" type="text" required />
+                  </div>
+                  
+                  <div>
+                    <label for="email">Enter Email ID:</label>
+                    <input id="email" type="email" required />
+                  </div>
+                  <div>
+                    <label for="age">Enter your DOB:</label>
+                    <input id="age" type="date" required />
+                  </div>
+                  <div>
+                    <label for="address">Enter address:</label>
+                    <input id="address" type="text" required />
+                  </div>
+                  <div>
+                    Choose your gender:
+                    <div class="gender">
+                     <div>
+                      <label for="gender">Male</label>
+                      <input id="gender" type="radio" name="gender" required />
+                     </div>
+                     <div>
+                      <label for="gender">Female</label>
+                      <input id="gender" type="radio" name="gender" required />
+                     </div>
+                    </div>
+                  </div>
+                  <textarea
+                    id="message"
+                    placeholder="Leave your message here for more query...📩"
+                  ></textarea>
+                  <div class="buttons">
+                    <button type="reset">Reset</button>
+                    <button type="submit">Submit</button>
+                  </div>
+                </fieldset>
+              </form>
+          </section>
+    </main>
+  </body>
+</html>
