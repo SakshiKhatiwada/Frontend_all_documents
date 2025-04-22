@@ -3,7 +3,7 @@
 <!-- giving DTD = Document Type Definition -->
 <!DOCTYPE note [
     <!ELEMENT note (to,from,heading,body)>
-    <!-- order should be same as definied -->
+    <!-- order should be same as defined -->
     <!ELEMENT to (#PCDATA)>
     <!ELEMENT from (#PCDATA)>
     <!ELEMENT heading (#PCDATA)>
