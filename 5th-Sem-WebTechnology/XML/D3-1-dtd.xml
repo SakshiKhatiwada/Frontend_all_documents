@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- UTF-8 is a character encoding standard used for electronic communication -->
+<!--INFO
+A markup language is a text-encoding system which specifies the structure and formatting of a
+document and potentially the relationships among its parts. -->
+
+<!-- SECTION internal DTD -->
+<!-- <!DOCTYPE note [
+<!ELEMENT note (to,from,body)>
+<!ELEMENT to (#PCDATA)>
+<!ELEMENT from (#PCDATA)>
+<!ELEMENT body (#PCDATA)>
+]> -->
+<!-- tip can't have 2 DTD in 1 file -->
+
+<!-- SECTION external DTD -->
+<!DOCTYPE address SYSTEM "external.dtd">
+<address>
+    <name>Sakshi</name>
+    <company>Self-Work</company>
+    <contact>sakshikhatiwada37@gmail.com</contact>
+    <!-- <!ATTLIST name id CDATA #REQUIRED> -->
+</address>
+
+<!-- SECTION Attributes in DTD -->
+<!-- <!ATTLIST employee id CDATA #REQUIRED>
+ <employee id="001"/> -->
+ <!-- ERR not supported??? -->

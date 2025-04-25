@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- XSD = XML Schema Definiton, used for expressing constraint about XML docs, like DTD but provides more control on xml structure -->
+
+<!-- XSD definition types -->
+<!-- Type 1: Simple Type => type is given directly-->
+<!-- <xs:element name="student_name" type="xs:int"> -->
+
+<!-- Type 2: Complex Type => has child elements -->
+<xs:schema xmlns:xs="https://www.w3.org/2001/xmlschema">
+    <xs:complexType>
+        <xs:element name="contact">
+            <xs:sequence>
+                <xs:element name='name' type="xs:string"/>
+                <xs:element name='company' type="xs:string"/>
+                <xs:element name='contact' type="xs:string"/>
+            </xs:sequence>
+        </xs:element>
+    </xs:complexType>
+</xs:schema>
+    
