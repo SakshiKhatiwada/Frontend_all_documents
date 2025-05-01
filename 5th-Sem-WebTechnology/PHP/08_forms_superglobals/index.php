@@ -1,3 +1,8 @@
+<?php
+$contactsFile = 'contacts.json';
+$contacts = file_exists($contactsFile) ? json_decode(file_get_contents($contactsFile),true) : [];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,14 +16,17 @@
 
     <a href="create.php">create a contact</a>
 
-
     <ul>
+
         <!-- common to write for loops in HTML templates -->
+        <?php 
+        // var_dump($contacts); 
+        ?>
         <?php foreach ($contacts as $contact): ?>
             <li>
                 <img src="<?php echo $contact['image']; ?>" height="50" alt="image">
-                <?php echo "{$contac['name']} - {$contact['email']}-{$contact['phone']}" ?>
-                <a href="delete.php?name=<?php echo "{$contac['name']}" ?>">Delete</a>
+                <?php echo "{$contact['name']} - {$contact['email']}-{$contact['phone']}"; ?>
+                <a href="delete.php?id=<?php echo "{$contact['id']}"; ?>">Delete</a>
             </li>
         <?php endforeach; ?>
     </ul>

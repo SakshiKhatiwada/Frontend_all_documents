@@ -37,6 +37,7 @@ if ($name && $email && $phone && isset($_FILES['image'])) {
         //json_decode converts the contents into associative array
 
         $contacts[] = [
+            "id" => rand(100000, 200000),
             "name" => $name,
             "email" => $email,
             "phone" => $phone,
@@ -47,7 +48,7 @@ if ($name && $email && $phone && isset($_FILES['image'])) {
         //JSON_PRETTY_PRINT is optional
 
         echo "Contact Added: $name ($email, $phone)";
-    }else{
+    } else {
         echo "Image upload failed";
     }
 
