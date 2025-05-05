@@ -1,0 +1,4 @@
+<!ELEMENT address (name,company,contact)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT company (#PCDATA)>
+<!ELEMENT contact (#PCDATA)>

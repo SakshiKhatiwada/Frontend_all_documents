@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- encoding = Latin-1/West European character set). -->
+<!-- giving DTD = Document Type Definition -->
+<!DOCTYPE note [
+    <!ELEMENT note (to,from,heading,body)>
+    <!-- order should be same as defined -->
+    <!ELEMENT to (#PCDATA)>
+    <!ELEMENT from (#PCDATA)>
+    <!ELEMENT heading (#PCDATA)>
+    <!ELEMENT body (#PCDATA)>
+]>
+
+<!-- PCDATA = Parsed Character Data, can only have text, no child -->
+
+<!-- msg -->
+<note>
+    <to>Friend</to>
+    <from>Sakshi</from>
+    <heading>Reminder</heading>
+    <body>Study Well</body>
+</note>
+
+<!-- NOTE Design goals for XML:
+ 1. XML shall be straightforwardly usable over the Internet. 
+2. XML shall support a wide variety of applications. 
+3. XML shall be compatible with SGML. 
+4. It shall be easy to write programs which process XML documents. 
+5. The number of optional features in XML is to be kept to the absolute minimum,
+ideally zero. 
+6. XML documents should be human-legible and reasonably clear. 
+7. The XML design should be prepared quickly. 
+8. The design of XML shall be formal and concise. 
+9. XML documents shall be easy to create.  -->
